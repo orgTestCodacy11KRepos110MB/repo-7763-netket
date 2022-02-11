@@ -1,0 +1,14 @@
+﻿netket.graph.Pyrochlore
+=======================
+
+.. currentmodule:: netket.graph
+
+.. autoclass:: Pyrochlore
+   :show-inheritance:
+
+   
+      
+   
+      
+
+   

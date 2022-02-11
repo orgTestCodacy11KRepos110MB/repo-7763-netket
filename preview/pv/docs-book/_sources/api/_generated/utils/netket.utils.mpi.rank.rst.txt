@@ -1,0 +1,6 @@
+﻿netket.utils.mpi.rank
+=====================
+
+.. currentmodule:: netket.utils.mpi
+
+.. autodata:: rank

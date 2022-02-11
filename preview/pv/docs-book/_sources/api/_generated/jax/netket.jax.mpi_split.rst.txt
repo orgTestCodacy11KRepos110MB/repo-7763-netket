@@ -1,0 +1,6 @@
+﻿netket.jax.mpi\_split
+=====================
+
+.. currentmodule:: netket.jax
+
+.. autofunction:: mpi_split

@@ -1,0 +1,14 @@
+﻿netket.graph.disjoint\_union
+============================
+
+.. currentmodule:: netket.graph
+
+.. autoclass:: disjoint_union
+   :show-inheritance:
+
+   
+      
+   
+      
+
+   

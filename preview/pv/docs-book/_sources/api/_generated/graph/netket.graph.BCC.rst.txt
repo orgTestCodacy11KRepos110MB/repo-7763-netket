@@ -1,0 +1,14 @@
+﻿netket.graph.BCC
+================
+
+.. currentmodule:: netket.graph
+
+.. autoclass:: BCC
+   :show-inheritance:
+
+   
+      
+   
+      
+
+   

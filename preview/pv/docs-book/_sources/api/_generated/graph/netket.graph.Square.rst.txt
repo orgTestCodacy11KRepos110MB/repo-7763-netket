@@ -1,0 +1,14 @@
+﻿netket.graph.Square
+===================
+
+.. currentmodule:: netket.graph
+
+.. autoclass:: Square
+   :show-inheritance:
+
+   
+      
+   
+      
+
+   
