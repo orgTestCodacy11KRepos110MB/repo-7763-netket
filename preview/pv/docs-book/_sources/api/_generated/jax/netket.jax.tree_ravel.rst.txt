@@ -1,6 +1,0 @@
-﻿netket.jax.tree\_ravel
-======================
-
-.. currentmodule:: netket.jax
-
-.. autofunction:: tree_ravel
