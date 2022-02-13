@@ -1,0 +1,14 @@
+﻿netket.graph.Kagome
+===================
+
+.. currentmodule:: netket.graph
+
+.. autoclass:: Kagome
+   :show-inheritance:
+
+   
+      
+   
+      
+
+   

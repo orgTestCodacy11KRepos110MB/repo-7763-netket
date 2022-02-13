@@ -1,0 +1,6 @@
+﻿netket.utils.mpi.n\_nodes
+=========================
+
+.. currentmodule:: netket.utils.mpi
+
+.. autodata:: n_nodes

@@ -1,0 +1,1483 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>netket.nn.log_cosh &#8212; NetKet</title>
+    
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    
+  <link href="../../../_static/styles/sphinx-book-theme.css?digest=da817022793a90a681ee" rel="stylesheet">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="netket.nn.reim_relu" href="netket.nn.reim_relu.html" />
+    <link rel="prev" title="netket.nn.swish" href="netket.nn.swish.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+<!-- An invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint">
+<!-- NAVBAR From boostrap 4.5 and old netket -->
+  <nav class="navbar navbar-custom navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand navbar-custom-brand" href="../../../index.html">
+                <span>
+                  <img src="../../../_static/logonav.png" width="50" height="50" class="navbar-custom-logo d-inline-block align-center" alt="" loading="lazy">
+                </span>
+            NetKet</a>
+      <span class="navbar-text navbar-version pull-left"><b></b></span>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <!-- Active class kept here for posterity
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          -->
+          
+              <li class="nav-item">
+                <a class="nav-link" href="../../../getting_started.html">Get Started</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../../citing.html">Citing NetKet</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../../about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../../index.html">Documentation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../api.html">API Reference</a>
+              </li>
+          
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/netket/netket"><i class="fab fa-github" aria-hidden="true"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://twitter.com/NetKetOrg"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+              </li>
+          
+          
+            <li class="nav-item">
+              <a class="btn btn-outline-warning btn-download" href="../../../docs2/install.html">Install</a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- /end NAVBAR From boostrap 4.5 and old netket --></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="pl-4 pr-3 bd-sidebar site-navigation noprint " id="site-navigation">
+    <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo_simple.jpg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Getting Started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs2/install.html">
+   Installation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../tutorials/j1j2.html">
+   Ground-State: J1-J2 model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../tutorials/G-CNN_Honeycomb.html">
+   Symmetries: Honeycomb Heisenberg model
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference Documentation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/changelog.html">
+   Change Log
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/superop.html">
+   The Lindblad Master Equation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/hilbert.html">
+   The Hilbert module
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/operator.html">
+   The Operator module
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/varstate.html">
+   The Variational State Interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/sr.html">
+   Quantum Geometric Tensor and Stochastic Reconfiguration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/drivers.html">
+   The Drivers API
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/sharp-bits.html">
+   🔪 The Sharp Bits 🔪
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  API documentation
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/api-stability.html">
+   API Stability
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../api.html">
+   Public API
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../graph.html">
+     netket.graph
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.AbstractGraph.html">
+       netket.graph.AbstractGraph
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.Graph.html">
+       netket.graph.Graph
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.Lattice.html">
+       netket.graph.Lattice
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.Edgeless.html">
+       netket.graph.Edgeless
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.Hypercube.html">
+       netket.graph.Hypercube
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.lattice.LatticeSite.html">
+       netket.graph.lattice.LatticeSite
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.Grid.html">
+       netket.graph.Grid
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.Diamond.html">
+       netket.graph.Diamond
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.Kagome.html">
+       netket.graph.Kagome
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.Square.html">
+       netket.graph.Square
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.Chain.html">
+       netket.graph.Chain
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.Cube.html">
+       netket.graph.Cube
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.BCC.html">
+       netket.graph.BCC
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.FCC.html">
+       netket.graph.FCC
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.Honeycomb.html">
+       netket.graph.Honeycomb
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.KitaevHoneycomb.html">
+       netket.graph.KitaevHoneycomb
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.Triangular.html">
+       netket.graph.Triangular
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.Pyrochlore.html">
+       netket.graph.Pyrochlore
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.DoubledGraph.html">
+       netket.graph.DoubledGraph
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../graph/netket.graph.disjoint_union.html">
+       netket.graph.disjoint_union
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../hilbert.html">
+     netket.hilbert
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../hilbert/netket.hilbert.AbstractHilbert.html">
+       netket.hilbert.AbstractHilbert
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../hilbert/netket.hilbert.ContinuousHilbert.html">
+       netket.hilbert.ContinuousHilbert
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../hilbert/netket.hilbert.DiscreteHilbert.html">
+       netket.hilbert.DiscreteHilbert
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../hilbert/netket.hilbert.HomogeneousHilbert.html">
+       netket.hilbert.HomogeneousHilbert
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../hilbert/netket.hilbert.CustomHilbert.html">
+       netket.hilbert.CustomHilbert
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../hilbert/netket.hilbert.TensorHilbert.html">
+       netket.hilbert.TensorHilbert
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../hilbert/netket.hilbert.DoubledHilbert.html">
+       netket.hilbert.DoubledHilbert
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../hilbert/netket.hilbert.Spin.html">
+       netket.hilbert.Spin
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../hilbert/netket.hilbert.Qubit.html">
+       netket.hilbert.Qubit
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../hilbert/netket.hilbert.Fock.html">
+       netket.hilbert.Fock
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../hilbert/netket.hilbert.Particle.html">
+       netket.hilbert.Particle
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../operator.html">
+     netket.operator
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.AbstractOperator.html">
+       netket.operator.AbstractOperator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.AbstractSuperOperator.html">
+       netket.operator.AbstractSuperOperator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.DiscreteOperator.html">
+       netket.operator.DiscreteOperator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.BoseHubbard.html">
+       netket.operator.BoseHubbard
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.GraphOperator.html">
+       netket.operator.GraphOperator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.LocalOperator.html">
+       netket.operator.LocalOperator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.Ising.html">
+       netket.operator.Ising
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.Heisenberg.html">
+       netket.operator.Heisenberg
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.PauliStrings.html">
+       netket.operator.PauliStrings
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.LocalLiouvillian.html">
+       netket.operator.LocalLiouvillian
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.boson.create.html">
+       netket.operator.boson.create
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.boson.destroy.html">
+       netket.operator.boson.destroy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.boson.number.html">
+       netket.operator.boson.number
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.boson.proj.html">
+       netket.operator.boson.proj
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.spin.sigmax.html">
+       netket.operator.spin.sigmax
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.spin.sigmay.html">
+       netket.operator.spin.sigmay
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.spin.sigmaz.html">
+       netket.operator.spin.sigmaz
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.spin.sigmap.html">
+       netket.operator.spin.sigmap
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.spin.sigmam.html">
+       netket.operator.spin.sigmam
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.ContinuousOperator.html">
+       netket.operator.ContinuousOperator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.KineticEnergy.html">
+       netket.operator.KineticEnergy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.PotentialEnergy.html">
+       netket.operator.PotentialEnergy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../operator/netket.operator.SumOperator.html">
+       netket.operator.SumOperator
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../exact.html">
+     netket.exact
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../exact/netket.exact.full_ed.html">
+       netket.exact.full_ed
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../exact/netket.exact.lanczos_ed.html">
+       netket.exact.lanczos_ed
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../exact/netket.exact.steady_state.html">
+       netket.exact.steady_state
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../sampler.html">
+     netket.sampler
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.Sampler.html">
+       netket.sampler.Sampler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.SamplerState.html">
+       netket.sampler.SamplerState
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.MetropolisSamplerState.html">
+       netket.sampler.MetropolisSamplerState
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.MetropolisRule.html">
+       netket.sampler.MetropolisRule
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.ExactSampler.html">
+       netket.sampler.ExactSampler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.MetropolisSampler.html">
+       netket.sampler.MetropolisSampler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.MetropolisSamplerNumpy.html">
+       netket.sampler.MetropolisSamplerNumpy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.ARDirectSampler.html">
+       netket.sampler.ARDirectSampler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.MetropolisLocal.html">
+       netket.sampler.MetropolisLocal
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.MetropolisExchange.html">
+       netket.sampler.MetropolisExchange
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.MetropolisHamiltonian.html">
+       netket.sampler.MetropolisHamiltonian
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.MetropolisRule.html">
+       netket.sampler.MetropolisRule
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.rules.LocalRule.html">
+       netket.sampler.rules.LocalRule
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.rules.ExchangeRule.html">
+       netket.sampler.rules.ExchangeRule
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.rules.HamiltonianRule.html">
+       netket.sampler.rules.HamiltonianRule
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.rules.HamiltonianRuleNumpy.html">
+       netket.sampler.rules.HamiltonianRuleNumpy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.rules.CustomRuleNumpy.html">
+       netket.sampler.rules.CustomRuleNumpy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.SamplerState.html">
+       netket.sampler.SamplerState
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../samplers/netket.sampler.MetropolisSamplerState.html">
+       netket.sampler.MetropolisSamplerState
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../models.html">
+     netket.models
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../models/netket.models.RBM.html">
+       netket.models.RBM
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../models/netket.models.RBMModPhase.html">
+       netket.models.RBMModPhase
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../models/netket.models.RBMMultiVal.html">
+       netket.models.RBMMultiVal
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../models/netket.models.RBMSymm.html">
+       netket.models.RBMSymm
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../models/netket.models.Jastrow.html">
+       netket.models.Jastrow
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../models/netket.models.MPSPeriodic.html">
+       netket.models.MPSPeriodic
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../models/netket.models.NDM.html">
+       netket.models.NDM
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../models/netket.models.GCNN.html">
+       netket.models.GCNN
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../models/netket.models.AbstractARNN.html">
+       netket.models.AbstractARNN
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../models/netket.models.ARNNDense.html">
+       netket.models.ARNNDense
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../models/netket.models.ARNNConv1D.html">
+       netket.models.ARNNConv1D
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../models/netket.models.ARNNConv2D.html">
+       netket.models.ARNNConv2D
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../models/netket.models.FastARNNConv1D.html">
+       netket.models.FastARNNConv1D
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../models/netket.models.FastARNNConv2D.html">
+       netket.models.FastARNNConv2D
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="../../nn.html">
+     netket.nn
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.Dense.html">
+       netket.nn.Dense
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.DenseGeneral.html">
+       netket.nn.DenseGeneral
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.DenseSymm.html">
+       netket.nn.DenseSymm
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.DenseEquivariant.html">
+       netket.nn.DenseEquivariant
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.Conv.html">
+       netket.nn.Conv
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.Embed.html">
+       netket.nn.Embed
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.MaskedDense1D.html">
+       netket.nn.MaskedDense1D
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.MaskedConv1D.html">
+       netket.nn.MaskedConv1D
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.MaskedConv2D.html">
+       netket.nn.MaskedConv2D
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.celu.html">
+       netket.nn.celu
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.elu.html">
+       netket.nn.elu
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.gelu.html">
+       netket.nn.gelu
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.glu.html">
+       netket.nn.glu
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.log_sigmoid.html">
+       netket.nn.log_sigmoid
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.log_softmax.html">
+       netket.nn.log_softmax
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.relu.html">
+       netket.nn.relu
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.sigmoid.html">
+       netket.nn.sigmoid
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.soft_sign.html">
+       netket.nn.soft_sign
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.softmax.html">
+       netket.nn.softmax
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.softplus.html">
+       netket.nn.softplus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.swish.html">
+       netket.nn.swish
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       netket.nn.log_cosh
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.reim_relu.html">
+       netket.nn.reim_relu
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netket.nn.reim_selu.html">
+       netket.nn.reim_selu
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../jax.html">
+     netket.jax
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.HashablePartial.html">
+       netket.jax.HashablePartial
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.PRNGKey.html">
+       netket.jax.PRNGKey
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.PRNGSeq.html">
+       netket.jax.PRNGSeq
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.mpi_split.html">
+       netket.jax.mpi_split
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.tree_dot.html">
+       netket.jax.tree_dot
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.tree_axpy.html">
+       netket.jax.tree_axpy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.tree_cast.html">
+       netket.jax.tree_cast
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.tree_conj.html">
+       netket.jax.tree_conj
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.tree_size.html">
+       netket.jax.tree_size
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.tree_leaf_iscomplex.html">
+       netket.jax.tree_leaf_iscomplex
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.tree_ishomogeneous.html">
+       netket.jax.tree_ishomogeneous
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.tree_ravel.html">
+       netket.jax.tree_ravel
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.tree_to_real.html">
+       netket.jax.tree_to_real
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.dtype_complex.html">
+       netket.jax.dtype_complex
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.is_complex.html">
+       netket.jax.is_complex
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.is_complex_dtype.html">
+       netket.jax.is_complex_dtype
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.maybe_promote_to_complex.html">
+       netket.jax.maybe_promote_to_complex
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.expect.html">
+       netket.jax.expect
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.vjp.html">
+       netket.jax.vjp
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.chunk.html">
+       netket.jax.chunk
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.unchunk.html">
+       netket.jax.unchunk
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.vjp_chunked.html">
+       netket.jax.vjp_chunked
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jax/netket.jax.vmap_chunked.html">
+       netket.jax.vmap_chunked
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../vqs.html">
+     netket.vqs
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vqs/netket.vqs.VariationalState.html">
+       netket.vqs.VariationalState
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vqs/netket.vqs.ExactState.html">
+       netket.vqs.ExactState
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vqs/netket.vqs.MCState.html">
+       netket.vqs.MCState
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vqs/netket.vqs.MCMixedState.html">
+       netket.vqs.MCMixedState
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vqs/netket.vqs.get_local_kernel.html">
+       netket.vqs.get_local_kernel
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vqs/netket.vqs.get_local_kernel_arguments.html">
+       netket.vqs.get_local_kernel_arguments
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../optimizer.html">
+     netket.optimizer
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../optim/netket.optimizer.Adam.html">
+       netket.optimizer.Adam
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../optim/netket.optimizer.AdaGrad.html">
+       netket.optimizer.AdaGrad
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../optim/netket.optimizer.Sgd.html">
+       netket.optimizer.Sgd
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../optim/netket.optimizer.Momentum.html">
+       netket.optimizer.Momentum
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../optim/netket.optimizer.RmsProp.html">
+       netket.optimizer.RmsProp
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../optim/netket.optimizer.SR.html">
+       netket.optimizer.SR
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../optim/netket.optimizer.qgt.QGTAuto.html">
+       netket.optimizer.qgt.QGTAuto
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../optim/netket.optimizer.qgt.QGTOnTheFly.html">
+       netket.optimizer.qgt.QGTOnTheFly
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../optim/netket.optimizer.qgt.QGTJacobianPyTree.html">
+       netket.optimizer.qgt.QGTJacobianPyTree
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../optim/netket.optimizer.qgt.QGTJacobianDense.html">
+       netket.optimizer.qgt.QGTJacobianDense
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../optim/netket.optimizer.solver.svd.html">
+       netket.optimizer.solver.svd
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../optim/netket.optimizer.solver.cholesky.html">
+       netket.optimizer.solver.cholesky
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../optim/netket.optimizer.solver.LU.html">
+       netket.optimizer.solver.LU
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../optim/netket.optimizer.solver.solve.html">
+       netket.optimizer.solver.solve
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../logging.html">
+     netket.logging
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../driver/netket.logging.RuntimeLog.html">
+       netket.logging.RuntimeLog
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../driver/netket.logging.JsonLog.html">
+       netket.logging.JsonLog
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../driver/netket.logging.StateLog.html">
+       netket.logging.StateLog
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../driver/netket.logging.TensorBoardLog.html">
+       netket.logging.TensorBoardLog
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../callbacks.html">
+     netket.callbacks
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../callbacks/netket.callbacks.EarlyStopping.html">
+       netket.callbacks.EarlyStopping
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../callbacks/netket.callbacks.Timeout.html">
+       netket.callbacks.Timeout
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../utils.html">
+     netket.utils
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../utils/netket.utils.HashableArray.html">
+       netket.utils.HashableArray
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../utils/netket.utils.mpi.available.html">
+       netket.utils.mpi.available
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../utils/netket.utils.mpi.n_nodes.html">
+       netket.utils.mpi.n_nodes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../utils/netket.utils.mpi.rank.html">
+       netket.utils.mpi.rank
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../utils/netket.utils.mpi.MPI_jax_comm.html">
+       netket.utils.mpi.MPI_jax_comm
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../utils/netket.utils.mpi.MPI_py_comm.html">
+       netket.utils.mpi.MPI_py_comm
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../docs/api-experimental.html">
+   Experimental API
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../docs/_generated/experimental/samplers/netket.experimental.sampler.MetropolisPtSampler.html">
+     netket.experimental.sampler.MetropolisPtSampler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../docs/_generated/experimental/samplers/netket.experimental.sampler.MetropolisLocalPt.html">
+     netket.experimental.sampler.MetropolisLocalPt
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../docs/_generated/experimental/samplers/netket.experimental.sampler.MetropolisExchangePt.html">
+     netket.experimental.sampler.MetropolisExchangePt
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../docs/_generated/experimental/samplers/netket.experimental.sampler.MetropolisSamplerPmap.html">
+     netket.experimental.sampler.MetropolisSamplerPmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../docs/_generated/experimental/variational/netket.experimental.vqs.variables_from_file.html">
+     netket.experimental.vqs.variables_from_file
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../docs/_generated/experimental/variational/netket.experimental.vqs.variables_from_tar.html">
+     netket.experimental.vqs.variables_from_tar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../docs/_generated/experimental/dynamics/netket.experimental.driver.TDVP.html">
+     netket.experimental.driver.TDVP
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Developer Documentation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/contributing.html">
+   Contributing to NetKet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/writing-tests.html">
+   Writing Tests
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+<div class="col py-1 d-flex topbar-main">
+    <div class="topbar-left">
+        
+        <label class="nav-toggle-button topbarbtn" for="__navigation">
+            <div class="visually-hidden">Toggle navigation</div>
+            <i class="fas fa-bars"></i>
+        </label>
+        
+    </div>
+    <div class="topbar-right">
+        <!-- Launch buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/netket/netket"><button type="button" class="topbarbtn--wide"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/netket/netket/issues/new?title=Issue%20on%20page%20%2Fapi/_generated/nn/netket.nn.log_cosh.html&body=Your%20issue%20content%20here."><button
+                type="button" class="topbarbtn--wide" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+        
+<div class="dropdown-buttons-trigger sb-download-buttons">
+    <button id="dropdown-buttons-trigger" class="topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/api/_generated/nn/netket.nn.log_cosh.rst.txt"><button type="button"
+                class="topbarbtn--wide" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="topbarbtn--wide" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>netket.nn.log_cosh</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="netket-nn-log-cosh">
+<h1>netket.nn.log_cosh<a class="headerlink" href="#netket-nn-log-cosh" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="netket.nn.log_cosh">
+<span class="sig-prename descclassname"><span class="pre">netket.nn.</span></span><span class="sig-name descname"><span class="pre">log_cosh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/netket/nn/activation.html#log_cosh"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netket.nn.log_cosh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="netket.nn.swish.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">netket.nn.swish</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="netket.nn.reim_relu.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">netket.nn.reim_relu</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Giuseppe Carleo et al.<br/>
+  
+      &copy; Copyright 2019-2021, The Netket authors - All rights reserved.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  
+  <script src="../../../_static/scripts/sphinx-book-theme.js?digest=da817022793a90a681ee"></script>
+
+
+  </body>
+</html>

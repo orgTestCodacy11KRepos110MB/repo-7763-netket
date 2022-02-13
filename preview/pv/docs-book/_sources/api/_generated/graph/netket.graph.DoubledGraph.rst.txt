@@ -1,0 +1,14 @@
+﻿netket.graph.DoubledGraph
+=========================
+
+.. currentmodule:: netket.graph
+
+.. autoclass:: DoubledGraph
+   :show-inheritance:
+
+   
+      
+   
+      
+
+   

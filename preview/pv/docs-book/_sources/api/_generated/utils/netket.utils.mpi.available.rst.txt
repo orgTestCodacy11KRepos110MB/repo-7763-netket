@@ -1,0 +1,6 @@
+﻿netket.utils.mpi.available
+==========================
+
+.. currentmodule:: netket.utils.mpi
+
+.. autodata:: available

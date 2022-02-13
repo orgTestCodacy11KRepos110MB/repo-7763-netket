@@ -1,0 +1,14 @@
+﻿netket.graph.FCC
+================
+
+.. currentmodule:: netket.graph
+
+.. autoclass:: FCC
+   :show-inheritance:
+
+   
+      
+   
+      
+
+   

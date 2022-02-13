@@ -1,0 +1,5 @@
+<map id="inheritance6d8a5bbab4" name="inheritance6d8a5bbab4">
+<area shape="rect" id="node1" href="netket.operator.AbstractOperator.html#netket.operator.AbstractOperator" target="_top" title="Abstract class for quantum Operators. This class prototypes the methods" alt="" coords="5,5,196,31"/>
+<area shape="rect" id="node3" href="netket.operator.DiscreteOperator.html#netket.operator.DiscreteOperator" target="_top" title="This class is the base class for operators defined on a" alt="" coords="244,5,435,31"/>
+<area shape="rect" id="node2" href="#netket.operator.AbstractSuperOperator" target="_top" title="Generic base class for super&#45;operators acting on the tensor product (DoubledHilbert)" alt="" coords="483,5,711,31"/>
+</map>
