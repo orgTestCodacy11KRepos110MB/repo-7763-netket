@@ -1,0 +1,14 @@
+﻿netket.graph.Cube
+=================
+
+.. currentmodule:: netket.graph
+
+.. autoclass:: Cube
+   :show-inheritance:
+
+   
+      
+   
+      
+
+   

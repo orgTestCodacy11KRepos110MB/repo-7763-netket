@@ -1,0 +1,14 @@
+﻿netket.graph.Honeycomb
+======================
+
+.. currentmodule:: netket.graph
+
+.. autoclass:: Honeycomb
+   :show-inheritance:
+
+   
+      
+   
+      
+
+   

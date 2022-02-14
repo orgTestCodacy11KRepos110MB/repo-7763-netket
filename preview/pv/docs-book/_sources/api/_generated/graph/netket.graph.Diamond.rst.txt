@@ -1,0 +1,14 @@
+﻿netket.graph.Diamond
+====================
+
+.. currentmodule:: netket.graph
+
+.. autoclass:: Diamond
+   :show-inheritance:
+
+   
+      
+   
+      
+
+   

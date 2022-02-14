@@ -1,0 +1,58 @@
+(netket_hilbert_api)=
+# netket.hilbert
+
+```{eval-rst}
+.. currentmodule:: netket.hilbert
+
+```
+
+Hilbert-space objects determine the state space of a quantum system and a specific choice of basis. 
+All implementations of Hilbert spaces derive from the class `AbstractHilbert` and fall into two classes:
+ - discrete Hilbert spaces, which inherit from the abstract class `DiscreteHilbert` and include spin (`Spin`), Fock (`Fock`), and qubit (`Qubit`) spaces. Discrete spaces are typically used to describe lattice systems. 
+ The lattice structure itself is, however, not part of the Hilbert space class and can be defined separately.
+ - continuous Hilbert spaces, which inherit from the abstract class `ContinuousHilbert`. 
+ Currently, the only concrete continuous space provided by NetKet is `Particle`.
+
+
+```{eval-rst}
+.. inheritance-diagram:: netket.hilbert
+   :top-classes: netket.hilbert.AbstractHilbert
+   :parts: 1
+
+```
+
+## Abstract Classes
+
+Below you find a list of all abstract classes defined in this module, from which you can inherit if you want to define new hilbert spaces.
+
+```{eval-rst}
+.. autosummary::
+   :toctree: _generated/hilbert
+   :template: class
+   :nosignatures:
+
+   AbstractHilbert
+   ContinuousHilbert
+   DiscreteHilbert
+   HomogeneousHilbert
+
+```
+## Concrete Classes
+
+Below you find a list of all concrete classes that you can use.
+
+```{eval-rst}
+.. autosummary::
+   :toctree: _generated/hilbert
+   :template: class
+   :nosignatures:
+
+   CustomHilbert
+   TensorHilbert
+   DoubledHilbert
+   Spin
+   Qubit
+   Fock
+   Particle
+
+```
