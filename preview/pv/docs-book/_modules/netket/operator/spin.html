@@ -70,10 +70,10 @@
   <nav class="navbar navbar-custom navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand navbar-custom-brand" href="../../../index.html">
-                <span>
-                  <img src="../../../_static/logonav.png" width="50" height="50" class="navbar-custom-logo d-inline-block align-center" alt="" loading="lazy">
-                </span>
-            NetKet</a>
+            <img src="../../../_static/logonav.png" width="50" height="50" class="navbar-brand-logo d-inline-block align-center" alt="" loading="lazy">
+        <div class="navbar-brand-text d-inline-block align-center">
+        NetKet</div>
+      </a>
       <span class="navbar-text navbar-version pull-left"><b></b></span>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,7 +81,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <!-- Active class kept here for posterity
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -105,7 +105,7 @@
               </li>
           
         </ul>
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
           
               <li class="nav-item">
                 <a class="nav-link" href="https://github.com/netket/netket"><i class="fab fa-github" aria-hidden="true"></i></a>
@@ -113,10 +113,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="https://twitter.com/NetKetOrg"><i class="fab fa-twitter" aria-hidden="true"></i></a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://join.slack.com/t/mlquantum/shared_invite/zt-11x4qfoc0-hTge76XqJApq_6vUFmaiYw"><i class="fab fa-slack" aria-hidden="true"></i></a>
+              </li>
           
           
             <li class="nav-item">
-              <a class="btn btn-outline-warning btn-download" href="../../../docs2/install.html">Install</a>
+              <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ms-md-3" href="../../../docs2/install.html">Install</a>
             </li>
           
         </ul>
@@ -170,12 +173,22 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../../tutorials/j1j2.html">
+  <a class="reference internal" href="../../../tutorials/gs-ising.html">
+   Ground-State: Ising model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../tutorials/gs-heinsenberg.html">
+   Ground-State: Heisenberg model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../tutorials/gs-j1j2.html">
    Ground-State: J1-J2 model
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../../tutorials/G-CNN_Honeycomb.html">
+  <a class="reference internal" href="../../../tutorials/gs-gcnn-honeycomb.html">
    Symmetries: Honeycomb Heisenberg model
   </a>
  </li>
@@ -1558,8 +1571,6 @@
     </div>
     <div class="footer-content row">
         <footer class="col footer"><p>
-  
-    By Giuseppe Carleo et al.<br/>
   
       &copy; Copyright 2019-2021, The Netket authors - All rights reserved.<br/>
 </p>

@@ -74,10 +74,10 @@
   <nav class="navbar navbar-custom navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand navbar-custom-brand" href="../index.html">
-                <span>
-                  <img src="../_static/logonav.png" width="50" height="50" class="navbar-custom-logo d-inline-block align-center" alt="" loading="lazy">
-                </span>
-            NetKet</a>
+            <img src="../_static/logonav.png" width="50" height="50" class="navbar-brand-logo d-inline-block align-center" alt="" loading="lazy">
+        <div class="navbar-brand-text d-inline-block align-center">
+        NetKet</div>
+      </a>
       <span class="navbar-text navbar-version pull-left"><b></b></span>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,7 +85,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <!-- Active class kept here for posterity
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -109,7 +109,7 @@
               </li>
           
         </ul>
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
           
               <li class="nav-item">
                 <a class="nav-link" href="https://github.com/netket/netket"><i class="fab fa-github" aria-hidden="true"></i></a>
@@ -117,10 +117,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="https://twitter.com/NetKetOrg"><i class="fab fa-twitter" aria-hidden="true"></i></a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://join.slack.com/t/mlquantum/shared_invite/zt-11x4qfoc0-hTge76XqJApq_6vUFmaiYw"><i class="fab fa-slack" aria-hidden="true"></i></a>
+              </li>
           
           
             <li class="nav-item">
-              <a class="btn btn-outline-warning btn-download" href="../docs2/install.html">Install</a>
+              <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ms-md-3" href="../docs2/install.html">Install</a>
             </li>
           
         </ul>
@@ -174,12 +177,22 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../tutorials/j1j2.html">
+  <a class="reference internal" href="../tutorials/gs-ising.html">
+   Ground-State: Ising model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorials/gs-heinsenberg.html">
+   Ground-State: Heisenberg model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorials/gs-j1j2.html">
    Ground-State: J1-J2 model
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../tutorials/G-CNN_Honeycomb.html">
+  <a class="reference internal" href="../tutorials/gs-gcnn-honeycomb.html">
    Symmetries: Honeycomb Heisenberg model
   </a>
  </li>
@@ -1520,19 +1533,19 @@ If you work with NetKet and determine that a particular implementation works bes
 The derivation in the case of a variational optimization for the ground state, can be sketched as follows:</p>
 <p>Given a a variational wavefunction <span class="math notranslate nohighlight">\( \ket{\psi_W} \)</span>, we consider its first order Taylor expansion around <span class="math notranslate nohighlight">\( W \)</span>, <span class="math notranslate nohighlight">\( \ket{\psi_{W+\delta W}} = \ket{\psi_W} + \delta W_k \hat{O}_k \ket{\psi_W} \)</span>, where <span class="math notranslate nohighlight">\( \bra{\sigma}\hat{O}_k \ket{\eta} = \delta_{\sigma,\eta} \frac{d \log\psi_W(\sigma)}{dW_k}\)</span>.
 We wish to determine the updates <span class="math notranslate nohighlight">\( \delta_{\sigma,\eta} \)</span> of the variational parameters that match a step of imaginary-time evolution, given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9deac366-6998-47e0-8192-54f7ffa03511">
-<span class="eqno">(1)<a class="headerlink" href="#equation-9deac366-6998-47e0-8192-54f7ffa03511" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c428c403-5c9f-4be0-bb95-493be2ab56ec">
+<span class="eqno">(1)<a class="headerlink" href="#equation-c428c403-5c9f-4be0-bb95-493be2ab56ec" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \ket{\phi} = U(\epsilon)\ket{\psi_W} = e^{\epsilon\hat{H}}\ket{\psi_W} \sim (\mathbb{I} - \epsilon \hat{H})\ket{\psi_W}
 \end{equation}\]</div>
 <p>It is possible to show that the updates <span class="math notranslate nohighlight">\(\delta W_k \)</span> that minimise the norm of the state <span class="math notranslate nohighlight">\(\ket{\phi}-\ket{\psi_{W+\delta W}}\)</span> can be determined by solving the linear system</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2f9fff03-3a5b-4bc0-8c51-b8ab9156c7df">
-<span class="eqno">(2)<a class="headerlink" href="#equation-2f9fff03-3a5b-4bc0-8c51-b8ab9156c7df" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-062580fe-b058-43c6-88e4-da0c754e54c7">
+<span class="eqno">(2)<a class="headerlink" href="#equation-062580fe-b058-43c6-88e4-da0c754e54c7" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 S_{i,k} \delta W_k = F_i
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\( F_i = \langle \hat{E}^{loc} \hat{O}_i\rangle - \langle \hat{E}^{loc} \rangle\langle \hat{O}_i\rangle \)</span> is the gradient of the Energy and <span class="math notranslate nohighlight">\( S_{i,k} = \langle \hat{O}^\dagger_i \hat{O}_k\rangle - \langle \hat{O}^\dagger_i \rangle\langle \hat{O}_k\rangle \)</span> is the Quantum Geometric Tensor.
 The QGT is positive definite, therefore it can be inverted and the solution is formally written as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b6bcdeec-57b0-4950-ba21-0081914473f9">
-<span class="eqno">(3)<a class="headerlink" href="#equation-b6bcdeec-57b0-4950-ba21-0081914473f9" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-82c27a74-03d4-4a14-9398-0bbd805560ea">
+<span class="eqno">(3)<a class="headerlink" href="#equation-82c27a74-03d4-4a14-9398-0bbd805560ea" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \bf{\delta W} = S^{-1} \bf{F},
 \end{equation}\]</div>
 <p>where bold fonts are used for vectors.
@@ -1603,8 +1616,6 @@ We reccomend you experiment and specify the QGT format that gives you the best p
     </div>
     <div class="footer-content row">
         <footer class="col footer"><p>
-  
-    By Giuseppe Carleo et al.<br/>
   
       &copy; Copyright 2019-2021, The Netket authors - All rights reserved.<br/>
 </p>

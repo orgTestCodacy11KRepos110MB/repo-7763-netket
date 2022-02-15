@@ -45,6 +45,8 @@
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ground-State: Heisenberg model" href="gs-heinsenberg.html" />
+    <link rel="prev" title="Installation" href="../docs2/install.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -72,10 +74,10 @@
   <nav class="navbar navbar-custom navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand navbar-custom-brand" href="../index.html">
-                <span>
-                  <img src="../_static/logonav.png" width="50" height="50" class="navbar-custom-logo d-inline-block align-center" alt="" loading="lazy">
-                </span>
-            NetKet</a>
+            <img src="../_static/logonav.png" width="50" height="50" class="navbar-brand-logo d-inline-block align-center" alt="" loading="lazy">
+        <div class="navbar-brand-text d-inline-block align-center">
+        NetKet</div>
+      </a>
       <span class="navbar-text navbar-version pull-left"><b></b></span>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,7 +85,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <!-- Active class kept here for posterity
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -107,7 +109,7 @@
               </li>
           
         </ul>
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
           
               <li class="nav-item">
                 <a class="nav-link" href="https://github.com/netket/netket"><i class="fab fa-github" aria-hidden="true"></i></a>
@@ -115,10 +117,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="https://twitter.com/NetKetOrg"><i class="fab fa-twitter" aria-hidden="true"></i></a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://join.slack.com/t/mlquantum/shared_invite/zt-11x4qfoc0-hTge76XqJApq_6vUFmaiYw"><i class="fab fa-slack" aria-hidden="true"></i></a>
+              </li>
           
           
             <li class="nav-item">
-              <a class="btn btn-outline-warning btn-download" href="../docs2/install.html">Install</a>
+              <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ms-md-3" href="../docs2/install.html">Install</a>
             </li>
           
         </ul>
@@ -170,14 +175,24 @@
   Tutorials
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Ground-State: Ising model
+  </a>
+ </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="j1j2.html">
+  <a class="reference internal" href="gs-heinsenberg.html">
+   Ground-State: Heisenberg model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gs-j1j2.html">
    Ground-State: J1-J2 model
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="G-CNN_Honeycomb.html">
+  <a class="reference internal" href="gs-gcnn-honeycomb.html">
    Symmetries: Honeycomb Heisenberg model
   </a>
  </li>
@@ -2367,15 +2382,27 @@ Notice that since correlators do not enjoy the zero-variance principle as the Ha
             <footer class="footer-article noprint">
                 
     <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../docs2/install.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Installation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="gs-heinsenberg.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ground-State: Heisenberg model</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
     </div>
     <div class="footer-content row">
         <footer class="col footer"><p>
-  
-    By Giuseppe Carleo et al.<br/>
   
       &copy; Copyright 2019-2021, The Netket authors - All rights reserved.<br/>
 </p>

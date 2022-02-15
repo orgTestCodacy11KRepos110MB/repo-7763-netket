@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Ground-State: J1-J2 model &#8212; NetKet</title>
+    <title>Symmetries: Honeycomb Heisenberg model &#8212; NetKet</title>
     
     
   <link href="../_static/css/theme.css" rel="stylesheet">
@@ -45,8 +45,8 @@
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Symmetries: Honeycomb Heisenberg model" href="G-CNN_Honeycomb.html" />
-    <link rel="prev" title="Installation" href="../docs2/install.html" />
+    <link rel="next" title="Change Log" href="../docs/changelog.html" />
+    <link rel="prev" title="Ground-State: J1-J2 model" href="gs-j1j2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -74,10 +74,10 @@
   <nav class="navbar navbar-custom navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand navbar-custom-brand" href="../index.html">
-                <span>
-                  <img src="../_static/logonav.png" width="50" height="50" class="navbar-custom-logo d-inline-block align-center" alt="" loading="lazy">
-                </span>
-            NetKet</a>
+            <img src="../_static/logonav.png" width="50" height="50" class="navbar-brand-logo d-inline-block align-center" alt="" loading="lazy">
+        <div class="navbar-brand-text d-inline-block align-center">
+        NetKet</div>
+      </a>
       <span class="navbar-text navbar-version pull-left"><b></b></span>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,7 +85,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <!-- Active class kept here for posterity
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -109,7 +109,7 @@
               </li>
           
         </ul>
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
           
               <li class="nav-item">
                 <a class="nav-link" href="https://github.com/netket/netket"><i class="fab fa-github" aria-hidden="true"></i></a>
@@ -117,10 +117,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="https://twitter.com/NetKetOrg"><i class="fab fa-twitter" aria-hidden="true"></i></a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://join.slack.com/t/mlquantum/shared_invite/zt-11x4qfoc0-hTge76XqJApq_6vUFmaiYw"><i class="fab fa-slack" aria-hidden="true"></i></a>
+              </li>
           
           
             <li class="nav-item">
-              <a class="btn btn-outline-warning btn-download" href="../docs2/install.html">Install</a>
+              <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ms-md-3" href="../docs2/install.html">Install</a>
             </li>
           
         </ul>
@@ -173,13 +176,23 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Ground-State: J1-J2 model
+ <li class="toctree-l1">
+  <a class="reference internal" href="gs-ising.html">
+   Ground-State: Ising model
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="G-CNN_Honeycomb.html">
+  <a class="reference internal" href="gs-heinsenberg.html">
+   Ground-State: Heisenberg model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gs-j1j2.html">
+   Ground-State: J1-J2 model
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Symmetries: Honeycomb Heisenberg model
   </a>
  </li>
@@ -1361,7 +1374,7 @@
     <div class="dropdown-buttons">
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/netket/netket/blob/master/tutorials/j1j2.ipynb">
+        <a class="colab-button" href="https://colab.research.google.com/github/netket/netket/blob/master/tutorials/gs-gcnn-honeycomb.ipynb">
     <button type="button"
         class="topbarbtn--wide"
         title="Launch on Colab"
@@ -1397,7 +1410,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/netket/netket/issues/new?title=Issue%20on%20page%20%2Ftutorials/j1j2.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/netket/netket/issues/new?title=Issue%20on%20page%20%2Ftutorials/gs-gcnn-honeycomb.html&body=Your%20issue%20content%20here."><button
                 type="button" class="topbarbtn--wide" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -1413,7 +1426,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/tutorials/j1j2.ipynb.txt"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/tutorials/gs-gcnn-honeycomb.ipynb.txt"><button type="button"
                 class="topbarbtn--wide" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -1437,38 +1450,33 @@
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectives">
-   Objectives:
+  <a class="reference internal nav-link" href="#g-cnns-are-generalizations-of-cnns-to-non-abelian-groups">
+   G-CNNs are generalizations of CNNs to non-abelian groups
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#defining-a-custom-hamiltonian">
-   1) Defining a Custom Hamiltonian
+  <a class="reference internal nav-link" href="#defining-the-hamiltonian">
+   Defining the Hamiltonian
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#defining-the-machine">
-   2) Defining the Machine
+  <a class="reference internal nav-link" href="#defining-the-gcnn">
+   Defining the GCNN
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variational-monte-carlo-optimisation">
-   3) Variational Monte Carlo Optimisation
+  <a class="reference internal nav-link" href="#variational-monte-carlo">
+   Variational Monte Carlo
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measuring-observables">
-   4) Measuring Observables
+  <a class="reference internal nav-link" href="#checking-with-ed">
+   Checking with ED
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-visualisation">
-   5) Data Visualisation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sanity-check-exact-diagonalisation">
-   6) Sanity Check: Exact Diagonalisation
+  <a class="reference internal nav-link" href="#simulating-a-larger-lattice">
+   Simulating A Larger Lattice
   </a>
  </li>
 </ul>
@@ -1480,7 +1488,7 @@
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Ground-State: J1-J2 model</h1>
+                <h1>Symmetries: Honeycomb Heisenberg model</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1491,38 +1499,33 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectives">
-   Objectives:
+  <a class="reference internal nav-link" href="#g-cnns-are-generalizations-of-cnns-to-non-abelian-groups">
+   G-CNNs are generalizations of CNNs to non-abelian groups
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#defining-a-custom-hamiltonian">
-   1) Defining a Custom Hamiltonian
+  <a class="reference internal nav-link" href="#defining-the-hamiltonian">
+   Defining the Hamiltonian
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#defining-the-machine">
-   2) Defining the Machine
+  <a class="reference internal nav-link" href="#defining-the-gcnn">
+   Defining the GCNN
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variational-monte-carlo-optimisation">
-   3) Variational Monte Carlo Optimisation
+  <a class="reference internal nav-link" href="#variational-monte-carlo">
+   Variational Monte Carlo
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measuring-observables">
-   4) Measuring Observables
+  <a class="reference internal nav-link" href="#checking-with-ed">
+   Checking with ED
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-visualisation">
-   5) Data Visualisation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sanity-check-exact-diagonalisation">
-   6) Sanity Check: Exact Diagonalisation
+  <a class="reference internal nav-link" href="#simulating-a-larger-lattice">
+   Simulating A Larger Lattice
   </a>
  </li>
 </ul>
@@ -1535,32 +1538,58 @@
                 
               <div>
                 
-  <section id="ground-state-j1-j2-model">
-<h1>Ground-State: J1-J2 model<a class="headerlink" href="#ground-state-j1-j2-model" title="Permalink to this headline">¶</a></h1>
-<p>In this tutorial we will use NetKet to obtain the ground state of the J1-J2 model in one-dimension with periodic boundary conditions, using a Neural Network variational wave-function. The Hamiltonian of the model is given by:</p>
+  <section id="symmetries-honeycomb-heisenberg-model">
+<h1>Symmetries: Honeycomb Heisenberg model<a class="headerlink" href="#symmetries-honeycomb-heisenberg-model" title="Permalink to this headline">¶</a></h1>
+<p>The goal of this tutorial is to learn about group convolutional neural networks (G-CNNs), a useful tool for simulating lattices with high symmetry.
+The G-CNN is a generalization to the convolutional neural network (CNN) to non-abelian symmetry groups (groups that contain at least one pair of non-commuting elements).
+G-CNNs are a natural fit for lattices that have both point group and translational symmetries, as rotations, reflections and translations don’t commute with one-another.
+G-CNN can be uesd to study both the ground-state and excited-states.</p>
+<p>In this tutorial we will learn the ground state of the antiferromagnetic Heisenberg model on  the honeycomb lattice. The Heisenberg Hamiltonian is defined as follows:</p>
 <div class="math notranslate nohighlight">
-\[ H = \sum_{i=1}^{L} J_{1}\vec{\sigma}_{i} \cdot \vec{\sigma}_{i+1} + J_{2} \vec{\sigma}_{i} \cdot \vec{\sigma}_{i+2} \]</div>
-<p>where the sum is over sites of the 1-D chain. Here <span class="math notranslate nohighlight">\(\vec{\sigma}=(\sigma^x,\sigma^y,\sigma^z)\)</span> is the vector of Pauli matrices.</p>
-<p>We will also explore some useful functionalities provided by the package.</p>
-<section id="objectives">
-<h2>Objectives:<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. Defining custom Hamiltonians
-2. Defining the machine (variational ansatz)
-3. Variational Monte Carlo Optimisation
-4. Measuring observables
-5. Data Visualisation
-6. Sanity Check: Exact Diagonalisation
-</pre></div>
-</div>
-<p>Let’s start.</p>
+\[ H = \sum_{i,j \in \langle \rangle} \vec{\sigma}_{i} \cdot \vec{\sigma}_{j},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\vec{\sigma}_{i}\)</span> are Pauli matrices and <span class="math notranslate nohighlight">\(&lt;&gt;\)</span> denotes nearest neighbor interactons.</p>
+<p>For this tutorial, many of the calculations will be much faster on a GPU.
+If you don’t have access to a GPU, you can open a <a class="reference external" href="https://colab.research.google.com/">Google Colab</a> notebook, and set runtime type to GPU.
+To launch this notebook on Colab simply press the rocket button on the top bar.</p>
+<p>This tutorial wil be split into two parts:</p>
+<ul class="simple">
+<li><p>First I’ll provide a brief introduction to G-CNNs and describe what advantages they bring.</p></li>
+<li><p>Second, we’ll use NetKet to find the ground state of the antiferromagnetic Heisenberg model on the honeycomb lattice. First we will simulate a lattice with <span class="math notranslate nohighlight">\(N=18\)</span> sites in order to compare with exact diagonalization. Then we will simulate a lattice with <span class="math notranslate nohighlight">\(N=72\)</span> sites.</p></li>
+</ul>
+<section id="g-cnns-are-generalizations-of-cnns-to-non-abelian-groups">
+<h2>G-CNNs are generalizations of CNNs to non-abelian groups<a class="headerlink" href="#g-cnns-are-generalizations-of-cnns-to-non-abelian-groups" title="Permalink to this headline">¶</a></h2>
+<p>The convolutional neural network (CNN) has revolutionized the field of computer vision. The CNN enforces translational invariance, which means that feeding a CNN translated copies of an image will produce the exact same output. This is important for recognizing objects, which may located differently in different images.</p>
+<p>The  hidden layers of a CNN contain a group of <span class="math notranslate nohighlight">\({\bf features}\)</span>, corresponding to translations of the image, where each feature is represented by a vector. At each layer, the CNN integrates over these features to produce a different set of features over the translation group:</p>
+<div class="math notranslate nohighlight">
+\[ C^i_{x,y} = \sum_h {\bf W}_{x'-x, y'-y} \cdot {\bf f}_{x,y} \]</div>
+<p>As you can see, the index of the filter W is based on the displacement between the input feature {x’,y’} and the output feature {x, y}. This is known as an equivariant operation, as displacements in the input are propagated as displacements in the output (equivariance is actually bit more general, we’ll get to that in a moment). In the last layer, the CNN averages over these different features, forcing the output to be invariant to the input.</p>
+<p>To generalize the CNN to the G-CNN, lets abstract away from the specifics of the convolution. Instead of indexing the features with translations, we will use elements from a general symmetry group which may contain non-commmuting operations. In this case we must define a particular order of operations. For example, we could define an operation in the <span class="math notranslate nohighlight">\(p6m\)</span> space group, as a translation, followed by a rotation and a reflection about the origin. Non-abelian groups still maintain associativity and a closed algebra. This is easy to see with lattice symmetry groups. If two successive symmetry operations leave the lattice unchanged, applying both must also leave the lattice unchanged and therefore be symmetry operation in the group.</p>
+<p>For G-convolutions, the building blocks of the G-CNN, this algebra is all we need. The G-convolution also indexes the filters by looking at the “difference” between group elements, however this time there is an orientation to it. The G-convolution is defined as follows:</p>
+<div class="math notranslate nohighlight">
+\[ C^i_g = \sum_h {\bf W}_{g^{-1} h} \cdot {\bf f}_h \]</div>
+<p>The filters are indexed by <span class="math notranslate nohighlight">\(g^{-1} h\)</span>, which describes the mapping from <span class="math notranslate nohighlight">\(g \rightarrow h\)</span> but not vice-versa. This causes the output to be an <span class="math notranslate nohighlight">\({\bf involution}\)</span> of the input, meaning that the group elements are mapped to their respective inverses.</p>
+<p>G-convolutions are the most expressive linear transformation over a particular symmetry group. Therefore, if you want to define a linear-based model with a particular symmetry, G-CNNs maximize the number of parameters you can fit into a given memory profile. G-CNNs can be mapped down to other symmetry-averaged multi-layer linear models by masking filters (setting them to zero). On the Honeycomb lattice, the G-CNN (approximately) has a factor of 12 more parameters than a CNN averaged over <span class="math notranslate nohighlight">\(d_6\)</span> and a factor of <span class="math notranslate nohighlight">\(12 N\)</span> more parameters than a feedforward neural network averaged over <span class="math notranslate nohighlight">\(p6m\)</span> (where N is the number of sites) under an identical memory constraint.</p>
+<p>If you’d like to learn more about G-CNNs, check out the <a class="reference external" href="http://proceedings.mlr.press/v48/cohenc16.pdf">original paper</a> by Cohen <span class="math notranslate nohighlight">\({\it et \ al.}\)</span> or <a class="reference external" href="https://arxiv.org/pdf/2104.05085.pdf">this paper</a> by Roth <span class="math notranslate nohighlight">\({\it et \ al.}\)</span> that applies G-CNNs to quantum many-body systems.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ensure we run on the CPU</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;JAX_PLATFORM_NAME&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;cpu&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">pip</span> install --quiet netket
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: You are using pip version 22.0.2; however, version 22.0.3 is available.</span>
+<span class=" -Color -Color-Yellow">You should consider upgrading via the &#39;/home/filippovicentini/Documents/pythonenvs/utils-jupuyterlab/bin/python -m pip install --upgrade pip&#39; command.</span>
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">netket</span> <span class="k">as</span> <span class="nn">nk</span>
 
-<span class="c1"># Import netket library</span>
-<span class="kn">import</span> <span class="nn">netket</span> <span class="k">as</span> <span class="nn">nk</span>
+<span class="c1"># Import Json, this will be needed to examine log files</span>
+<span class="kn">import</span> <span class="nn">json</span>
 
 <span class="c1"># Helper libraries</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1570,260 +1599,400 @@
 </div>
 </div>
 </section>
-<section id="defining-a-custom-hamiltonian">
-<h2>1) Defining a Custom Hamiltonian<a class="headerlink" href="#defining-a-custom-hamiltonian" title="Permalink to this headline">¶</a></h2>
-<p>The first thing to do is to define the graph (lattice) on which to specify the Hamiltonian. Here we would like to build a one-dimensional graph with both nearest and next nearest neighbour bonds. The graph is created in the <code class="docutils literal notranslate"><span class="pre">nk.graph.CustomGraph</span></code> class. To initialise the class we simply provide a list of edges in the <code class="docutils literal notranslate"><span class="pre">[[site_i,</span> <span class="pre">site_j,</span> <span class="pre">edge_color],</span> <span class="pre">...]</span></code></p>
+<section id="defining-the-hamiltonian">
+<h2>Defining the Hamiltonian<a class="headerlink" href="#defining-the-hamiltonian" title="Permalink to this headline">¶</a></h2>
+<p>We begin by defining the Hamiltonian as a list of lattice points. NetKet will automatically convert these points into a graph with nearest neighbor connections. The honeycomb lattice is a triangular lattice with two sites per unit cell.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Couplings J1 and J2</span>
-<span class="n">J</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]</span>
-<span class="n">L</span> <span class="o">=</span> <span class="mi">14</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define custom graph</span>
-<span class="n">edge_colors</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
-    <span class="n">edge_colors</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="k">L</span>, 1])
-    <span class="n">edge_colors</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">%</span><span class="k">L</span>, 2])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Basis Vectors that define the positioning of the unit cell</span>
+<span class="n">basis_vectors</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">]]</span>
 
-<span class="c1"># Define the netket graph object</span>
-<span class="n">g</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">Graph</span><span class="p">(</span><span class="n">edges</span><span class="o">=</span><span class="n">edge_colors</span><span class="p">)</span>
+<span class="c1">#Locations of atoms within the unit cell</span>
+<span class="n">atom_positions</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">]]</span>
+
+<span class="c1">#Number of unit cells in each direction</span>
+<span class="n">dimensions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="c1">#Define the graph </span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">Lattice</span><span class="p">(</span><span class="n">basis_vectors</span><span class="o">=</span><span class="n">basis_vectors</span><span class="p">,</span> 
+                         <span class="n">atoms_coord</span> <span class="o">=</span> <span class="n">atom_positions</span><span class="p">,</span> 
+                         <span class="n">extent</span> <span class="o">=</span> <span class="n">dimensions</span>
+                        <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>We specify a different <code class="docutils literal notranslate"><span class="pre">color</span></code> for each type of bond so as to define a different operator for each of them.
-Next, we define the relevant bond operators.</p>
+<p>Lets check to see if our graph looks as expected. Since we have two sites per unit cell, we should have <span class="math notranslate nohighlight">\(3 \times 3 \times 2 = 18\)</span> sites. The coordination number of a hexagonal lattice is 3, so we should have <span class="math notranslate nohighlight">\(\frac{18 \times 3}{2} = 27\)</span> edges. Finally we have p6m symmetry, which should give ue <span class="math notranslate nohighlight">\(3 \times 3 \times 12 = 108\)</span> symmetry operations.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Sigma^z*Sigma^z interactions</span>
-<span class="n">sigmaz</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
-<span class="n">mszsz</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">sigmaz</span><span class="p">,</span> <span class="n">sigmaz</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Use Netket to find symmetries of the graph</span>
+<span class="n">symmetries</span> <span class="o">=</span> <span class="n">graph</span><span class="o">.</span><span class="n">automorphisms</span><span class="p">()</span>
 
-<span class="c1">#Exchange interactions</span>
-<span class="n">exchange</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
-
-<span class="n">bond_operator</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="n">J</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">mszsz</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
-    <span class="p">(</span><span class="n">J</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">mszsz</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
-    <span class="p">(</span><span class="o">-</span><span class="n">J</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">exchange</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>  
-    <span class="p">(</span><span class="n">J</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">exchange</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
-<span class="p">]</span>
-
-<span class="n">bond_color</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="c1">#Check that graph info is correct</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">n_nodes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">n_edges</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">symmetries</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18
+27
+216
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Side Remark</strong>: Notice the minus sign in front of the exchange. This is simply a basis rotation corresponding to the Marshall sign rule (as an exercise, change the sign of this exchange and observe that the exact diagonalization results in Section 6 do not change). The goal of this basis rotation is to speed up the convergence of the Monte Carlo simulations of the wave-function (by providing a good variational sign structure to start with), but in principle the converged results should be identical in both bases. Note further that this sign change is useful at low frustration (such as here <span class="math notranslate nohighlight">\(J_2=0.2\)</span>), but may actually be not optimal at stronger frustration. As a bonus exercise, repeat the calculation with <span class="math notranslate nohighlight">\(J_2=0.8\)</span>, and see which basis (<em>i.e.</em> which sign in front of the exchange) leads to faster convergence.</p>
-<p>Before defining the Hamiltonian, we also need to specify the Hilbert space. For our case, this would be the chain spin-half degrees of freedom.</p>
+<p>Oops! It looks like we have twice as many symmetries elements as we thought. Luckily for us, the ground state is still symmetric with respect to this extra symmetry that is unique to the <span class="math notranslate nohighlight">\(3 \times 3\)</span> lattice. We use this graph to define our Hilbert space and Hamiltonian:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Spin based Hilbert Space</span>
-<span class="n">hi</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">hilbert</span><span class="o">.</span><span class="n">Spin</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">total_sz</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="n">g</span><span class="o">.</span><span class="n">n_nodes</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the Hilbert space</span>
+<span class="n">hi</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">hilbert</span><span class="o">.</span><span class="n">Spin</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">n_nodes</span><span class="p">,</span> <span class="n">total_sz</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1">#Define the Hamiltonian</span>
+<span class="n">ha</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">operator</span><span class="o">.</span><span class="n">Heisenberg</span><span class="p">(</span><span class="n">hilbert</span><span class="o">=</span><span class="n">hi</span><span class="p">,</span> <span class="n">graph</span><span class="o">=</span><span class="n">graph</span><span class="p">,</span> <span class="n">sign_rule</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Note that we impose here the total magnetization to be zero (it turns out to be the correct magnetization for the ground-state). As an exercise, check that the energy of the lowest state in other magnetization sectors is larger.</p>
-<p>Next, we define the custom graph Hamiltonian using the <code class="docutils literal notranslate"><span class="pre">nk.operator.GraphOperator</span></code> class, by providing the hilbert space <code class="docutils literal notranslate"><span class="pre">hi</span></code>, the bond operators <code class="docutils literal notranslate"><span class="pre">bondops=bond_operator</span></code> and the corresponding bond color <code class="docutils literal notranslate"><span class="pre">bondops_colors=bond_color</span></code>. The information about the graph (bonds and bond colors) are contained within the <code class="docutils literal notranslate"><span class="pre">nk.hilbert.Spin</span></code> object <code class="docutils literal notranslate"><span class="pre">hi</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Custom Hamiltonian operator</span>
-<span class="n">op</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">operator</span><span class="o">.</span><span class="n">GraphOperator</span><span class="p">(</span><span class="n">hi</span><span class="p">,</span> <span class="n">graph</span><span class="o">=</span><span class="n">g</span><span class="p">,</span> <span class="n">bond_ops</span><span class="o">=</span><span class="n">bond_operator</span><span class="p">,</span> <span class="n">bond_ops_colors</span><span class="o">=</span><span class="n">bond_color</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>Since the Hexagonal lattice is bipartite, we know the phases obey a Marshall-Peierls sign rule. Therefore, we can use a real valued NN and just learn the amplitudes of the wavefunction.</p>
+<p>For models with a more complicated phase structure, its often better to learn the phases in an equal-amplitude configuration before training the amplitudes as detailed in <a class="reference external" href="https://journals.aps.org/prresearch/pdf/10.1103/PhysRevResearch.2.033075">this paper</a>. This can be implemented by first optimizing the weights on a modified model that sets <span class="math notranslate nohighlight">\(Re[log(\psi)] = 0\)</span></p>
+<p>We also optimize over states with total <span class="math notranslate nohighlight">\(S_z\)</span> of zero since we know the ground state has spin 0.</p>
 </section>
-<section id="defining-the-machine">
-<h2>2) Defining the Machine<a class="headerlink" href="#defining-the-machine" title="Permalink to this headline">¶</a></h2>
-<p>For this tutorial, we shall use the most common type of neural network: fully connected feedforward neural network <code class="docutils literal notranslate"><span class="pre">nk.machine.FFNN</span></code>. Other types of neural networks available will be discussed in other tutorials.</p>
+<section id="defining-the-gcnn">
+<h2>Defining the GCNN<a class="headerlink" href="#defining-the-gcnn" title="Permalink to this headline">¶</a></h2>
+<p>We can define a GCNN with an arbitrary number of layers and specify the feature dimension of each layer accordingly:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">netket.nn</span> <span class="k">as</span> <span class="nn">nknn</span>
-<span class="kn">import</span> <span class="nn">jax.numpy</span> <span class="k">as</span> <span class="nn">jnp</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Feature dimensions of hidden layers, from first to last</span>
+<span class="n">feature_dims</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
 
-<span class="kn">import</span> <span class="nn">flax.linen</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="c1">#Number of layers</span>
+<span class="n">num_layers</span> <span class="o">=</span> <span class="mi">4</span>
 
-<span class="k">class</span> <span class="nc">FFNN</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="nd">@nknn</span><span class="o">.</span><span class="n">compact</span>
-    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">nknn</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">features</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> 
-                       <span class="n">use_bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
-                       <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">complex128</span><span class="p">,</span> 
-                       <span class="n">kernel_init</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">initializers</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.01</span><span class="p">),</span> 
-                       <span class="n">bias_init</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">initializers</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
-                      <span class="p">)(</span><span class="n">x</span><span class="p">)</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">nknn</span><span class="o">.</span><span class="n">log_cosh</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">x</span>
-        
-<span class="n">model</span> <span class="o">=</span> <span class="n">FFNN</span><span class="p">()</span>
+<span class="c1">#Define the GCNN </span>
+<span class="n">ma</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">GCNN</span><span class="p">(</span><span class="n">symmetries</span> <span class="o">=</span> <span class="n">symmetries</span><span class="p">,</span> <span class="n">layers</span> <span class="o">=</span> <span class="n">num_layers</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="n">feature_dims</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>This a G-CNN with four layers, where each hidden layer contains a feature vector of length 8 for each element in p6m. This means that each hidden state has <span class="math notranslate nohighlight">\(8 \times 192 = 768\)</span> nodes. This is a huge model! But since we’re not symmetry-averaging, we only need to compute one wavefunction for each <span class="math notranslate nohighlight">\({\bf \sigma}\)</span>.</p>
+<p>Feel free to try different shaped models. By default, the GCNN weights are initialized with variance scaling, which ensures that the activations will be unit-normal throughout the model at the start of training. Additionally, GCNN defaults to a SELU non-linearity, which moves the activations in the direction of unit-normal, even when they start to deviate. These features ensure that our model will behave well, even when we stack a large number of layers.</p>
 </section>
-<section id="variational-monte-carlo-optimisation">
-<h2>3) Variational Monte Carlo Optimisation<a class="headerlink" href="#variational-monte-carlo-optimisation" title="Permalink to this headline">¶</a></h2>
-<p>We have now set up our model (Hamiltonian, Graph, Hilbert Space) and can proceed to optimise the variational ansatz we chose, namely the <code class="docutils literal notranslate"><span class="pre">ffnn</span></code> machine.</p>
-<p>To setup the variational Monte Carlo optimisation tool, we have to provide a sampler <code class="docutils literal notranslate"><span class="pre">nk.sampler</span></code> and an optimizer <code class="docutils literal notranslate"><span class="pre">nk.optimizer</span></code>.</p>
+<section id="variational-monte-carlo">
+<h2>Variational Monte Carlo<a class="headerlink" href="#variational-monte-carlo" title="Permalink to this headline">¶</a></h2>
+<p>In order to perform VMC we need to define a sampler and an optimizer. We sample using Metropolis-Hastings, which uses the exchange rule to propose new states. The exchange rule swaps the spin of two neighbouring sites, keeping the magnetization fixed (in this case, 0). We optimize uzing stochaistic reconfiguration, which uses curvature information to find the best direction of descent.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We shall use an exchange Sampler which preserves the global magnetization (as this is a conserved quantity in the model)</span>
-<span class="n">sa</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sampler</span><span class="o">.</span><span class="n">MetropolisExchange</span><span class="p">(</span><span class="n">hilbert</span><span class="o">=</span><span class="n">hi</span><span class="p">,</span> <span class="n">graph</span><span class="o">=</span><span class="n">g</span><span class="p">,</span> <span class="n">d_max</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Metropois-Hastings with two spins flipped that are at most second nearest neighbors </span>
+<span class="n">sa</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sampler</span><span class="o">.</span><span class="n">MetropolisExchange</span><span class="p">(</span><span class="n">hilbert</span> <span class="o">=</span> <span class="n">hi</span><span class="p">,</span> <span class="n">graph</span><span class="o">=</span><span class="n">graph</span><span class="p">,</span> <span class="n">d_max</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="c1"># Construct the variational state</span>
-<span class="n">vs</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">vqs</span><span class="o">.</span><span class="n">MCState</span><span class="p">(</span><span class="n">sa</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">n_samples</span><span class="o">=</span><span class="mi">1008</span><span class="p">)</span>
-
-<span class="c1"># We choose a basic, albeit important, Optimizer: the Stochastic Gradient Descent</span>
-<span class="n">opt</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">optimizer</span><span class="o">.</span><span class="n">Sgd</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
-
-<span class="c1"># Stochastic Reconfiguration</span>
+<span class="c1">#Stochaistic reconfiguration   </span>
+<span class="n">op</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">optimizer</span><span class="o">.</span><span class="n">Sgd</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">)</span>
 <span class="n">sr</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">optimizer</span><span class="o">.</span><span class="n">SR</span><span class="p">(</span><span class="n">diag_shift</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
 
-<span class="c1"># We can then specify a Variational Monte Carlo object, using the Hamiltonian, sampler and optimizers chosen.</span>
-<span class="c1"># Note that we also specify the method to learn the parameters of the wave-function: here we choose the efficient</span>
-<span class="c1"># Stochastic reconfiguration (Sr), here in an iterative setup</span>
-<span class="n">gs</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">VMC</span><span class="p">(</span><span class="n">hamiltonian</span><span class="o">=</span><span class="n">op</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">opt</span><span class="p">,</span> <span class="n">variational_state</span><span class="o">=</span><span class="n">vs</span><span class="p">,</span> <span class="n">preconditioner</span><span class="o">=</span><span class="n">sr</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="measuring-observables">
-<h2>4) Measuring Observables<a class="headerlink" href="#measuring-observables" title="Permalink to this headline">¶</a></h2>
-<p>Before running the optimization, it can be helpful to add some observables to keep track off during the optimization. For our purpose, let us measure the antiferromagnetic structure factor, defined as:</p>
-<p>$<span class="math notranslate nohighlight">\( \frac{1}{L} \sum_{ij} \langle \hat{\sigma}_{i}^z \cdot \hat{\sigma}_{j}^z\rangle e^{i\pi(i-j)}\)</span>$.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We need to specify the local operators as a matrix acting on a local Hilbert space </span>
-<span class="n">sf</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">sites</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">structure_factor</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">operator</span><span class="o">.</span><span class="n">LocalOperator</span><span class="p">(</span><span class="n">hi</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">complex</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
-        <span class="n">structure_factor</span> <span class="o">+=</span> <span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">operator</span><span class="o">.</span><span class="n">spin</span><span class="o">.</span><span class="n">sigmaz</span><span class="p">(</span><span class="n">hi</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">nk</span><span class="o">.</span><span class="n">operator</span><span class="o">.</span><span class="n">spin</span><span class="o">.</span><span class="n">sigmaz</span><span class="p">(</span><span class="n">hi</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span><span class="o">*</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="n">j</span><span class="p">))</span><span class="o">/</span><span class="n">L</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Once again, notice that we had to multiply the exchange operator (matrix) by some factor. This is to account for the Marshall basis rotation we made in our model.</p>
-<p>We can now optimize our variational ansatz. The optimization data for each iteration will be stored in a log file, which contains the following information:</p>
-<ol class="simple">
-<li><p>Mean, variance and uncertainty in the Energy <span class="math notranslate nohighlight">\( \langle \hat{H} \rangle \)</span></p></li>
-<li><p>Mean, variance and uncertainty in the Energy Variance, <span class="math notranslate nohighlight">\( \langle\hat{H}^{2}\rangle-\langle \hat{H}\rangle^{2}\)</span>.</p></li>
-<li><p>Acceptance rates of the sampler</p></li>
-<li><p>Mean, variance and uncertainty of observables (if specified)</p></li>
-</ol>
-<p>Now let’s learn the ground-state!</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run the optimization protocol</span>
-<span class="n">gs</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">out</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">obs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Structure Factor&#39;</span><span class="p">:</span> <span class="n">structure_factor</span><span class="p">})</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 600/600 [01:40&lt;00:00,  5.99it/s, Energy=-23.0641-0.0055j ± 0.0045 [σ²=0.0207, R̂=0.9965]]
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(JsonLog(&#39;test&#39;, mode=write, autoflush_cost=0.005)
-   Runtime cost:
-   	Log:    0.3097798824310303
-   	Params: 0.0022630691528320312,)
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="data-visualisation">
-<h2>5) Data Visualisation<a class="headerlink" href="#data-visualisation" title="Permalink to this headline">¶</a></h2>
-<p>Now that we have optimized our machine to find the ground state of the <span class="math notranslate nohighlight">\(J_1-J_2\)</span> model, let’s look at what we have.
-The relevant data are stored in the “.log” file while the optimized parameters are in the “.wf” file. The files are all in json format.</p>
-<p>We shall extract the energy as well as specified observables (antiferromagnetic structure factor in our case) from the “.log” file.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the data from the .log file</span>
-<span class="kn">import</span> <span class="nn">json</span>
+<span class="c1">#Define a variational state so we can keep the parameters if we like</span>
+<span class="n">vstate</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">variational</span><span class="o">.</span><span class="n">MCState</span><span class="p">(</span><span class="n">sampler</span><span class="o">=</span><span class="n">sa</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">ma</span><span class="p">,</span> <span class="n">n_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 
-<span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.log&quot;</span><span class="p">))</span>
+<span class="c1">#Define a driver that performs VMC</span>
+<span class="n">gs</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">VMC</span><span class="p">(</span><span class="n">ha</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">sr</span><span class="o">=</span><span class="n">sr</span><span class="p">,</span> <span class="n">variational_state</span><span class="o">=</span><span class="n">vstate</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lets start by running for 100 iterations. This took about 15 seconds per iteration on my CPU and about 1 second per iteration on the Tesla P100 GPU (If you’re using the free version of Colab you may get a Tesla K80 which is slightly slower). GPUs are fast! As you’ll see later, the speedup is even more pronounced on larger lattices.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Run the optimization</span>
+<span class="n">gs</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">n_iter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="s1">&#39;out&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 100/100 [01:06&lt;00:00,  1.51it/s, Energy=-40.471 ± 0.046 [σ²=0.238, R̂=0.9744]]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;netket.logging.json_log.JsonLog at 0x7fea898371d0&gt;,)
+</pre></div>
+</div>
+</div>
+</div>
+<p>This should get us under 0.1% error. Lets see how the energy evolves as we train.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Get data from log and </span>
+<span class="n">energy</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;out.log&quot;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">en</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Energy&quot;</span><span class="p">][</span><span class="s2">&quot;Mean&quot;</span><span class="p">]:</span>
+    <span class="n">energy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">en</span><span class="p">)</span>
+    
+<span class="c1">#plot the energy during the optimization</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Number of Iterations&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Energy&quot;</span><span class="p">)</span>
 
-<span class="n">iters</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Energy&#39;</span><span class="p">][</span><span class="s1">&#39;iters&#39;</span><span class="p">]</span>
-<span class="n">energy</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Energy&#39;</span><span class="p">][</span><span class="s1">&#39;Mean&#39;</span><span class="p">][</span><span class="s1">&#39;real&#39;</span><span class="p">]</span>
-<span class="n">sf</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Structure Factor&#39;</span><span class="p">][</span><span class="s1">&#39;Mean&#39;</span><span class="p">][</span><span class="s1">&#39;real&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">iters</span><span class="p">,</span> <span class="n">energy</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Energy&#39;</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Energy&#39;</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Iteration&#39;</span><span class="p">)</span>
-<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span> 
-<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">iters</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">sf</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Structure Factor&#39;</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Structure Factor&#39;</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">energy</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/j1j2_24_0.png" src="../_images/j1j2_24_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe6a2426510&gt;]
+</pre></div>
+</div>
+<img alt="../_images/gs-gcnn-honeycomb_18_1.png" src="../_images/gs-gcnn-honeycomb_18_1.png" />
 </div>
 </div>
-<p>Let’s also compute the average of those quantities (energy and neel order) over the last 50 iterations where the optimization seems to have converged.</p>
+<p>Looks like the first 40 iterations did most of the work! In order to get a more precise estimate, we can run 100 more iterations with a larger batch size. This will take about 15 minutes on the GPU (If you’re using a CPU, I suggest you skip this section). We access the batch size via the variational state.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Structure factor = </span><span class="si">{0:.3f}</span><span class="s2">(</span><span class="si">{1:.3f}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sf</span><span class="p">[</span><span class="o">-</span><span class="mi">50</span><span class="p">:]),</span>
-                                              <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">sf</span><span class="p">[</span><span class="o">-</span><span class="mi">50</span><span class="p">:]))</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">50</span><span class="p">)))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Energy = </span><span class="si">{0:.3f}</span><span class="s2">(</span><span class="si">{1:.3f}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">energy</span><span class="p">[</span><span class="o">-</span><span class="mi">50</span><span class="p">:]),</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">energy</span><span class="p">[</span><span class="o">-</span><span class="mi">50</span><span class="p">:])</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">50</span><span class="p">))))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Change batch size</span>
+<span class="n">vstate</span><span class="o">.</span><span class="n">n_samples</span> <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="c1">#Driver uses new batch size</span>
+<span class="n">gs</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">VMC</span><span class="p">(</span><span class="n">ha</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">sr</span><span class="o">=</span><span class="n">sr</span><span class="p">,</span> <span class="n">variational_state</span><span class="o">=</span><span class="n">vstate</span><span class="p">)</span>
+
+<span class="c1">#Run for 100 more iterations</span>
+<span class="n">gs</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">n_iter</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span><span class="n">out</span> <span class="o">=</span> <span class="s1">&#39;out&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Structure factor = 3.797(0.039)
-Energy = -23.062(0.001)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 100/100 [10:43&lt;00:00,  6.43s/it, Energy=-40.3884 ± 0.0045 [σ²=0.0207, R̂=1.0033]]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;netket.logging.json_log.JsonLog at 0x7fe6a31f2d90&gt;,)
 </pre></div>
 </div>
 </div>
 </div>
+<p>You will notice that the variance continues to get even smaller, giving evidence that we are nearing an eigenstate.</p>
 </section>
-<section id="sanity-check-exact-diagonalisation">
-<h2>6) Sanity Check: Exact Diagonalisation<a class="headerlink" href="#sanity-check-exact-diagonalisation" title="Permalink to this headline">¶</a></h2>
-<p>Now that we have obtained some results using VMC, it is a good time to check the quality of our results (at least for small system sizes). For this purpose, Netket provides exact diagonalisation tools.</p>
+<section id="checking-with-ed">
+<h2>Checking with ED<a class="headerlink" href="#checking-with-ed" title="Permalink to this headline">¶</a></h2>
+<p>It seems likely that our ground state is correct, as we approached an eigenstate with low energy, but lets be safe and check our work. We can do Lanczos diagonalization for small lattices in NetKet.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E_gs</span><span class="p">,</span> <span class="n">ket_gs</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">exact</span><span class="o">.</span><span class="n">lanczos_ed</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">compute_eigenvectors</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">structure_factor_gs</span> <span class="o">=</span> <span class="p">(</span><span class="n">ket_gs</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">conj</span><span class="p">()</span><span class="nd">@structure_factor</span><span class="o">.</span><span class="n">to_linear_operator</span><span class="p">()</span><span class="nd">@ket_gs</span><span class="p">)</span><span class="o">.</span><span class="n">real</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Exact Diagonalization</span>
+<span class="n">E_gs</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">exact</span><span class="o">.</span><span class="n">lanczos_ed</span><span class="p">(</span><span class="n">ha</span><span class="p">,</span> <span class="n">compute_eigenvectors</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Here we have specified that we want the corresponding eigenvector (in order to compute observables).</p>
+<p>Lets compare the VMC energy with the ED energy, by taking average energy over the last <span class="math notranslate nohighlight">\(20\)</span> iterations</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exact Ground-state Structure Factor: </span><span class="si">{0:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">structure_factor_gs</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exact ground state energy = </span><span class="si">{0:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">E_gs</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Get data from larger batch size</span>
+<span class="n">energy</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;out.log&quot;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">en</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Energy&quot;</span><span class="p">][</span><span class="s2">&quot;Mean&quot;</span><span class="p">]:</span>
+    <span class="n">energy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">en</span><span class="p">)</span>
+
+<span class="n">vmc_energy_18sites</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">energy</span><span class="p">)[</span><span class="o">-</span><span class="mi">20</span><span class="p">:])</span><span class="o">/</span><span class="mi">18</span>
+
+<span class="n">ED_energy_18sites</span> <span class="o">=</span> <span class="n">E_gs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="mi">18</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">vmc_energy_18sites</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ED_energy_18sites</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">((</span><span class="n">ED_energy_18sites</span><span class="o">-</span> <span class="n">vmc_energy_18sites</span><span class="p">)</span><span class="o">/</span><span class="n">ED_energy_18sites</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exact Ground-state Structure Factor: 3.803
-Exact ground state energy = -23.064
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.2437762156893766
+-2.243814630334411
+1.7120240021148795e-05
 </pre></div>
 </div>
 </div>
 </div>
-<p>So we see that the both energy and the structure factor we obtained is in agreement with the value obtained via exact diagonalisation.</p>
+<p>Looks like our model did a good job! If you just trained for the first 100 iterations the error should be less than <span class="math notranslate nohighlight">\(10^{-4}\)</span> and if you trained with the larger batch size, the error should be close to <span class="math notranslate nohighlight">\(10^{-5}\)</span></p>
+</section>
+<section id="simulating-a-larger-lattice">
+<h2>Simulating A Larger Lattice<a class="headerlink" href="#simulating-a-larger-lattice" title="Permalink to this headline">¶</a></h2>
+<p>Lets see how the GCNN does on a larger lattice that cannot be simulated with exact diagonalization. We’ll do a <span class="math notranslate nohighlight">\(6 \times 6\)</span> lattice which has <span class="math notranslate nohighlight">\(72\)</span> sites. We need to redefine a few things:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Redefine bigger graph</span>
+<span class="n">dimensions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+
+<span class="c1">#Define the graph </span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">Lattice</span><span class="p">(</span><span class="n">basis_vectors</span><span class="o">=</span><span class="n">basis_vectors</span><span class="p">,</span> 
+                         <span class="n">atoms_coord</span> <span class="o">=</span> <span class="n">atom_positions</span><span class="p">,</span> 
+                         <span class="n">extent</span> <span class="o">=</span> <span class="n">dimensions</span>
+                        <span class="p">)</span>
+<span class="c1"># Redefine the Hilbert/Hamiltonian for larger lattice space</span>
+<span class="n">hi</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">hilbert</span><span class="o">.</span><span class="n">Spin</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">n_nodes</span><span class="p">,</span> <span class="n">total_sz</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">ha</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">operator</span><span class="o">.</span><span class="n">Heisenberg</span><span class="p">(</span><span class="n">hilbert</span><span class="o">=</span><span class="n">hi</span><span class="p">,</span> <span class="n">graph</span><span class="o">=</span><span class="n">graph</span><span class="p">,</span> <span class="n">sign_rule</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Compute the symmetries for the bigger graph </span>
+<span class="n">symmetries</span> <span class="o">=</span> <span class="n">graph</span><span class="o">.</span><span class="n">automorphisms</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">symmetries</span><span class="p">))</span>
+
+<span class="c1">#Redefine everything on bigger graph</span>
+<span class="n">ma</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">GCNN</span><span class="p">(</span><span class="n">symmetries</span> <span class="o">=</span> <span class="n">symmetries</span><span class="p">,</span> <span class="n">layers</span> <span class="o">=</span> <span class="n">num_layers</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="n">feature_dims</span><span class="p">)</span>
+<span class="n">sa</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sampler</span><span class="o">.</span><span class="n">MetropolisExchange</span><span class="p">(</span><span class="n">hilbert</span> <span class="o">=</span> <span class="n">hi</span><span class="p">,</span> <span class="n">graph</span><span class="o">=</span><span class="n">graph</span><span class="p">,</span> <span class="n">d_max</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">vstate</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">variational</span><span class="o">.</span><span class="n">MCState</span><span class="p">(</span><span class="n">sampler</span><span class="o">=</span><span class="n">sa</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">ma</span><span class="p">,</span> <span class="n">n_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">n_discard_per_chain</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">gs</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">VMC</span><span class="p">(</span><span class="n">ha</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">sr</span><span class="o">=</span><span class="n">sr</span><span class="p">,</span> <span class="n">variational_state</span><span class="o">=</span><span class="n">vstate</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>432
+</pre></div>
+</div>
+</div>
+</div>
+<p>Looks like we have no extra symmetries this time, since <span class="math notranslate nohighlight">\(6 \times 6 \times 12 = 432\)</span>. Let’s run this model for 100 iterations. You will see that we quickly get close  to the ground state. This takes 15 minutes on a P100 GPU</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">energy</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">variance</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">gs</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">n_iter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">out</span><span class="o">=</span><span class="s2">&quot;out&quot;</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;out.log&quot;</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">en</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Energy&quot;</span><span class="p">][</span><span class="s2">&quot;Mean&quot;</span><span class="p">]:</span>
+    <span class="n">energy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">en</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Energy&quot;</span><span class="p">][</span><span class="s2">&quot;Variance&quot;</span><span class="p">]:</span>
+    <span class="n">variance</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 100/100 [14:53&lt;00:00,  8.93s/it, Energy=-155.43 ± 0.53 [σ²=31.79, R̂=0.9946]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can plot the energy and variance to see if we’re approaching an eigenstate</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Number of Iterations&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Energy&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">energy</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f20e9c2b190&gt;]
+</pre></div>
+</div>
+<img alt="../_images/gs-gcnn-honeycomb_32_1.png" src="../_images/gs-gcnn-honeycomb_32_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Number of Iterations&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Variance&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">variance</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f20e9702e90&gt;]
+</pre></div>
+</div>
+<img alt="../_images/gs-gcnn-honeycomb_33_1.png" src="../_images/gs-gcnn-honeycomb_33_1.png" />
+</div>
+</div>
+<p>It seems we are near an eigenstate. We can do a back-of-the-envelope calculation to see if this is a realistic ground state energy</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ED_energy_18sites</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">energy</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">graph</span><span class="o">.</span><span class="n">n_nodes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.243814630334411
+-2.158805247393738
+</pre></div>
+</div>
+</div>
+</div>
+<p>The energy for the bigger lattice is slightly less negative (as is typical for Heisenberg models with PBC) but they are pretty similar. It’s clear we are approaching the ground state</p>
+<p>We will benchmark how well our model is perfoming by tracking the relationship between the mean and variance of the energy over 400 more iterations. Then we will extrapolate this relationship to estimate the true ground state energy. This can tell us how our error evolves over time.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intervals</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="n">en_estimates</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">var_estimates</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">interval</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">intervals</span><span class="p">):</span>
+    <span class="c1">#run for 100 iterations</span>
+    <span class="n">gs</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">n_iter</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">out</span><span class="o">=</span><span class="s1">&#39;out&#39;</span><span class="p">)</span>
+
+    <span class="c1">#load data from iterations</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;out.log&quot;</span><span class="p">))</span>
+
+    <span class="c1">#append energies and variances to data</span>
+    <span class="k">for</span> <span class="n">en</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Energy&quot;</span><span class="p">][</span><span class="s2">&quot;Mean&quot;</span><span class="p">]:</span>
+        <span class="n">energy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">en</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Energy&quot;</span><span class="p">][</span><span class="s2">&quot;Variance&quot;</span><span class="p">]:</span>
+        <span class="n">variance</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+
+    <span class="n">en_est</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">energy</span><span class="p">[</span><span class="o">-</span><span class="mi">20</span><span class="p">:])</span>
+    <span class="n">var_est</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">variance</span><span class="p">[</span><span class="o">-</span><span class="mi">20</span><span class="p">:])</span>
+    <span class="n">en_estimates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">en_est</span><span class="p">)</span>
+    <span class="n">var_estimates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">var_est</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">en_est</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">var_est</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 20/20 [02:56&lt;00:00,  8.81s/it, Energy=-157.22 ± 0.32 [σ²=11.34, R̂=0.9780]]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-156.9362404126101
+10.740704288189896
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lets plot the energy vs. variance and draw a line of best fit</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Variance&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Energy&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">var_estimates</span><span class="p">,</span><span class="n">en_estimates</span><span class="p">)</span>
+<span class="n">fit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">var_estimates</span><span class="p">,</span><span class="n">en_estimates</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">var_estimates</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">fit</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">fit</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">fit</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f20e4704410&gt;]
+</pre></div>
+</div>
+<img alt="../_images/gs-gcnn-honeycomb_40_1.png" src="../_images/gs-gcnn-honeycomb_40_1.png" />
+</div>
+</div>
+<p>You can see that that the relationship between energy and variance is fairly well captured by a quadratic function. We can use this extrapolation to estimate the true ground state energy and the error in our wavefunction. Lets estimate the final energy of our Ansatz using our last 10,000 samples</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">final_en</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">en_estimates</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:])</span>
+<span class="n">extrapolated_est</span> <span class="o">=</span> <span class="n">fit</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">((</span><span class="n">extrapolated_est</span><span class="o">-</span><span class="n">final_en</span><span class="p">)</span><span class="o">/</span><span class="n">extrapolated_est</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0012942848437390558
+</pre></div>
+</div>
+</div>
+</div>
+<p>If everything went well your error should be around .1%!</p>
+<p>This concludes the tutorial. Only an hour ago we knew nothing about the Heisenberg model on a Hexagonal lattice. Now we have an accurate approximation of the ground state wavefunction!</p>
 </section>
 </section>
 
@@ -1835,17 +2004,17 @@ Exact ground state energy = -23.064
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../docs2/install.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="gs-j1j2.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Installation</p>
+            <p class="prev-next-title">Ground-State: J1-J2 model</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="G-CNN_Honeycomb.html" title="next page">
+    <a class='right-next' id="next-link" href="../docs/changelog.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Symmetries: Honeycomb Heisenberg model</p>
+        <p class="prev-next-title">Change Log</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -1855,8 +2024,6 @@ Exact ground state energy = -23.064
     </div>
     <div class="footer-content row">
         <footer class="col footer"><p>
-  
-    By Giuseppe Carleo et al.<br/>
   
       &copy; Copyright 2019-2021, The Netket authors - All rights reserved.<br/>
 </p>

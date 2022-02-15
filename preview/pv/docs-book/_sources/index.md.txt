@@ -54,10 +54,10 @@ tutorials/netket3
 :caption: Tutorials
 :maxdepth: 2
 
-tutorials/ising-gs
-tutorials/heinsenberg-gs
-tutorials/j1j2
-tutorials/G-CNN_Honeycomb
+tutorials/gs-ising
+tutorials/gs-heinsenberg
+tutorials/gs-j1j2
+tutorials/gs-gcnn-honeycomb
 ```   
 
 ```{toctree}
