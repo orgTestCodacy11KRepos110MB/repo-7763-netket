@@ -1,0 +1,6 @@
+﻿netket.utils.mpi.MPI\_jax\_comm
+===============================
+
+.. currentmodule:: netket.utils.mpi
+
+.. autodata:: MPI_jax_comm

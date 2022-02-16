@@ -1,0 +1,14 @@
+﻿netket.graph.KitaevHoneycomb
+============================
+
+.. currentmodule:: netket.graph
+
+.. autoclass:: KitaevHoneycomb
+   :show-inheritance:
+
+   
+      
+   
+      
+
+   

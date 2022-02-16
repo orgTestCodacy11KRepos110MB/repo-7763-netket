@@ -1,0 +1,117 @@
+h1 {
+    color: #003B71 !important;
+}
+
+@media screen and (max-width: 991px) {
+  .landing-page-box-logo {
+  background-image:none;
+  }
+  .navbar-brand, .navbar-form {
+    display:none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-brand, .navbar-form {
+    display:inline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .bs-sidenav .nav > .active > ul {
+    display: block;
+    position: fixed;
+  }
+}
+
+.navbar {
+    background-color: #2c3e50 !important;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+.navbar-brand-logo {
+    margin-right: 15px;
+}
+
+
+.navbar-custom {
+  position: static;
+  background-color: #2c3e50  !important;
+  z-index: 9999;
+}
+
+.sticky-top {
+  z-index: 9999;
+}
+
+.header {
+}
+
+.sig, .sig- {
+  display: block !important;
+}
+
+
+.py.function {
+  border-style: groove;
+}
+
+.class-dl-groups,
+.py.class,
+.py.function,
+.py.attribute,
+.py.method {
+  border: 1px solid #dbdbdb;
+  box-shadow: 2px 2px 3px rgba(10, 10, 10, 0.1);
+  margin-bottom: 1em;
+}
+
+.class-dl-groups > dt,
+.py.class > dt,
+.py.function > dt,
+.py.attribute > dt,
+.py.method > dt {
+  display: block;
+  background-color: whitesmoke;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 0.75rem;
+  /*font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif; */
+}
+
+.class-dl-groups > dt {
+    display: block !important;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.sig-name.descname {
+  color: #2e63b8;
+}
+
+.class-dl-groups > dd,
+.py.class > dd,
+.py.attribute > dd,
+.py.function > dd,
+.py.method > dd {
+  padding: 1rem 1.25rem;
+}
+
+.btn-bd-download {
+    font-weight: 600;
+    color: #ffe484;
+    border-color: #ffe484
+}
+
+.btn-bd-download:hover,
+.btn-bd-download:active {
+    color: #2a2730;
+    background-color: #ffe484;
+    border-color: #ffe484
+}
+
+.btn-bd-download:focus {
+    box-shadow: 0 0 0 3px rgba(255, 228, 132, 0.25)
+}
