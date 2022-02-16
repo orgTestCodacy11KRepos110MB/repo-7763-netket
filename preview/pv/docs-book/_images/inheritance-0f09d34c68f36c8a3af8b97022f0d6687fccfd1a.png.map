@@ -1,4 +1,0 @@
-<map id="inheritance596eb6c0ef" name="inheritance596eb6c0ef">
-<area shape="rect" id="node1" title="partial(func, *args, **keywords) &#45; new function with partial application" alt="" coords="5,5,133,31"/>
-<area shape="rect" id="node2" href="#netket.jax.HashablePartial" target="_top" title="A class behaving like functools.partial, but that retains it&#39;s hash" alt="" coords="181,5,337,31"/>
-</map>

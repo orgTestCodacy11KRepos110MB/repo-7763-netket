@@ -555,6 +555,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#ode-integrators">ODE Integrators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fermions">Fermions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_generated/experimental/hilbert/netket.experimental.hilbert.SpinOrbitalFermions.html">netket.experimental.hilbert.SpinOrbitalFermions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_generated/experimental/operator/netket.experimental.operator.FermionOperator2nd.html">netket.experimental.operator.FermionOperator2nd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_generated/experimental/operator/netket.experimental.operator.fermion.create.html">netket.experimental.operator.fermion.create</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_generated/experimental/operator/netket.experimental.operator.fermion.destroy.html">netket.experimental.operator.fermion.destroy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_generated/experimental/operator/netket.experimental.operator.fermion.number.html">netket.experimental.operator.fermion.number</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -670,6 +678,42 @@ driver above.</p>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_generated/experimental/dynamics/netket.experimental.dynamics.RK45.html#netket.experimental.dynamics.RK45" title="netket.experimental.dynamics.RK45"><code class="xref py py-obj docutils literal notranslate"><span class="pre">netket.experimental.dynamics.RK45</span></code></a></p></td>
 <td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fermions">
+<h2>Fermions<a class="headerlink" href="#fermions" title="Permalink to this headline">¶</a></h2>
+<p>This module contains hilbert space and operator implementations of fermions in second quantization.
+It is experimental until it has been thoroughly tested by the community, meaning feedback is welcome.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/experimental/hilbert/netket.experimental.hilbert.SpinOrbitalFermions.html#netket.experimental.hilbert.SpinOrbitalFermions" title="netket.experimental.hilbert.SpinOrbitalFermions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">netket.experimental.hilbert.SpinOrbitalFermions</span></code></a></p></td>
+<td><p>Hilbert space for 2nd quantization fermions with spin <cite>s</cite> distributed among <cite>n_orbital</cite> orbitals.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/experimental/operator/netket.experimental.operator.FermionOperator2nd.html#netket.experimental.operator.FermionOperator2nd" title="netket.experimental.operator.FermionOperator2nd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">netket.experimental.operator.FermionOperator2nd</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/experimental/operator/netket.experimental.operator.fermion.create.html#netket.experimental.operator.fermion.create" title="netket.experimental.operator.fermion.create"><code class="xref py py-obj docutils literal notranslate"><span class="pre">netket.experimental.operator.fermion.create</span></code></a></p></td>
+<td><p>Builds the fermion creation operator <span class="math notranslate nohighlight">\(\hat{a}^\dagger\)</span> acting on the <cite>site</cite>-th of the Hilbert space <cite>hilbert</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/experimental/operator/netket.experimental.operator.fermion.destroy.html#netket.experimental.operator.fermion.destroy" title="netket.experimental.operator.fermion.destroy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">netket.experimental.operator.fermion.destroy</span></code></a></p></td>
+<td><p>Builds the fermion destruction operator <span class="math notranslate nohighlight">\(\hat{a}\)</span> acting on the <cite>site</cite>-th of the Hilbert space <cite>hilbert</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/experimental/operator/netket.experimental.operator.fermion.number.html#netket.experimental.operator.fermion.number" title="netket.experimental.operator.fermion.number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">netket.experimental.operator.fermion.number</span></code></a></p></td>
+<td><p>Builds the number operator <span class="math notranslate nohighlight">\(\hat{a}^\dagger\hat{a}\)</span>  acting on the <cite>site</cite>-th of the Hilbert space <cite>hilbert</cite>.</p></td>
 </tr>
 </tbody>
 </table>

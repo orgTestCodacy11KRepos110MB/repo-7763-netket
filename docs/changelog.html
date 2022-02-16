@@ -555,6 +555,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="api-experimental.html#ode-integrators">ODE Integrators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-experimental.html#fermions">Fermions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_generated/experimental/hilbert/netket.experimental.hilbert.SpinOrbitalFermions.html">netket.experimental.hilbert.SpinOrbitalFermions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_generated/experimental/operator/netket.experimental.operator.FermionOperator2nd.html">netket.experimental.operator.FermionOperator2nd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_generated/experimental/operator/netket.experimental.operator.fermion.create.html">netket.experimental.operator.fermion.create</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_generated/experimental/operator/netket.experimental.operator.fermion.destroy.html">netket.experimental.operator.fermion.destroy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_generated/experimental/operator/netket.experimental.operator.fermion.number.html">netket.experimental.operator.fermion.number</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -574,6 +582,7 @@
 <h3>New features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Lattice</span></code> supports specifying arbitrary edge content for each unit cell via the kwarg <code class="docutils literal notranslate"><span class="pre">custom_edges</span></code>. A generator for hexagonal lattices with coloured edges is implemented as <code class="docutils literal notranslate"><span class="pre">nk.graph.KitaevHoneycomb</span></code>. <code class="docutils literal notranslate"><span class="pre">nk.graph.Grid</span></code> again supports colouring edges by direction. <a class="reference external" href="https://github.com/netket/netket/pull/1074">#1074</a></p></li>
+<li><p>Fermionic hilbert space (<code class="docutils literal notranslate"><span class="pre">nkx.hilbert.SpinOrbitalFermions</span></code>) and fermionic operators (<code class="docutils literal notranslate"><span class="pre">nkx.operator.fermion</span></code>) to treat systems with a finite number of Orbitals have been added to the experimental submodule. The operators are also integrated with <a class="reference external" href="https://quantumai.google/openfermion">OpenFermion</a>. Those functionalities are still in development and we would welcome feedback. <a class="reference external" href="https://github.com/netket/netket/pull/1090">#1090</a></p></li>
 </ul>
 </div>
 <div class="section" id="breaking-changes">

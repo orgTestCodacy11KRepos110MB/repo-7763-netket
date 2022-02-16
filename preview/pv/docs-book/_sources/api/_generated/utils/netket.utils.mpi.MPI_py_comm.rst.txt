@@ -1,6 +1,0 @@
-﻿netket.utils.mpi.MPI\_py\_comm
-==============================
-
-.. currentmodule:: netket.utils.mpi
-
-.. autodata:: MPI_py_comm

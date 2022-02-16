@@ -1,5 +1,0 @@
-<map id="inheritancee349bf5f2b" name="inheritancee349bf5f2b">
-<area shape="rect" id="node1" href="_generated/graph/netket.graph.AbstractGraph.html#netket.graph.AbstractGraph" target="_top" title="Abstract class for NetKet graph objects." alt="" coords="5,5,120,31"/>
-<area shape="rect" id="node2" href="_generated/graph/netket.graph.Graph.html#netket.graph.Graph" target="_top" title="A simple implementation of Graph based on an external graph library." alt="" coords="168,5,240,31"/>
-<area shape="rect" id="node3" href="_generated/graph/netket.graph.Lattice.html#netket.graph.Lattice" target="_top" title="A lattice built by periodic arrangement of a given unit cell." alt="" coords="288,5,360,31"/>
-</map>

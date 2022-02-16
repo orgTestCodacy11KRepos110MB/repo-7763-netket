@@ -1,6 +1,0 @@
-<map id="inheritance3bb3f3d260" name="inheritance3bb3f3d260">
-<area shape="rect" id="node1" href="_generated/vqs/netket.vqs.ExactState.html#netket.vqs.ExactState" target="_top" title="Variational State for a variational quantum state computed on the whole" alt="" coords="217,5,309,31"/>
-<area shape="rect" id="node2" href="_generated/vqs/netket.vqs.VariationalState.html#netket.vqs.VariationalState" target="_top" title="Abstract class for variational states representing either pure states" alt="" coords="5,55,132,80"/>
-<area shape="rect" id="node5" href="_generated/vqs/netket.vqs.MCState.html#netket.vqs.MCState" target="_top" title="Variational State for a Variational Neural Quantum State." alt="" coords="224,104,301,129"/>
-<area shape="rect" id="node3" href="_generated/vqs/netket.vqs.MCMixedState.html#netket.vqs.MCMixedState" target="_top" title="Variational State for a Mixed Variational Neural Quantum State." alt="" coords="393,80,509,105"/>
-</map>

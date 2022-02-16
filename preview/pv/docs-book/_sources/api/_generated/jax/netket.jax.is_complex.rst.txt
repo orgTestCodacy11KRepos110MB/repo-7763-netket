@@ -1,6 +1,0 @@
-﻿netket.jax.is\_complex
-======================
-
-.. currentmodule:: netket.jax
-
-.. autofunction:: is_complex
