@@ -212,7 +212,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_dissipator_conn_size</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">L</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_jump_ops</span><span class="p">:</span>
             <span class="n">Hnh</span> <span class="o">=</span> <span class="n">Hnh</span> <span class="o">-</span> <span class="mf">0.5</span><span class="n">j</span> <span class="o">*</span> <span class="n">L</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span> <span class="o">@</span> <span class="n">L</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_max_dissipator_conn_size</span> <span class="o">+=</span> <span class="n">L</span><span class="o">.</span><span class="n">max_conn_size</span> <span class="o">**</span> <span class="mi">2</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_max_dissipator_conn_size</span> <span class="o">+=</span> <span class="n">L</span><span class="o">.</span><span class="n">max_conn_size</span><span class="o">**</span><span class="mi">2</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_Hnh</span> <span class="o">=</span> <span class="n">Hnh</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
 
@@ -498,7 +498,7 @@
             <span class="p">]</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">append_trace</span><span class="p">:</span>
-            <span class="n">op_size</span> <span class="o">=</span> <span class="n">M</span> <span class="o">**</span> <span class="mi">2</span>
+            <span class="n">op_size</span> <span class="o">=</span> <span class="n">M</span><span class="o">**</span><span class="mi">2</span>
 
             <span class="k">def</span> <span class="nf">matvec</span><span class="p">(</span><span class="n">rho_vec</span><span class="p">):</span>
                 <span class="n">rho</span> <span class="o">=</span> <span class="n">rho_vec</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">M</span><span class="p">,</span> <span class="n">M</span><span class="p">))</span>
@@ -522,12 +522,12 @@
             <span class="c1"># The logic behind the use of Hnh_dag_ and Hnh_ is derived from the</span>
             <span class="c1"># convention adopted in local_liouvillian.cc, and inspired from reference</span>
             <span class="c1"># arXiv:1504.05266</span>
-            <span class="n">op_size</span> <span class="o">=</span> <span class="n">M</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="n">op_size</span> <span class="o">=</span> <span class="n">M</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
 
             <span class="k">def</span> <span class="nf">matvec</span><span class="p">(</span><span class="n">rho_vec</span><span class="p">):</span>
                 <span class="n">rho</span> <span class="o">=</span> <span class="n">rho_vec</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">M</span><span class="p">,</span> <span class="n">M</span><span class="p">))</span>
 
-                <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">M</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">rho</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+                <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">M</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">rho</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
                 <span class="n">drho</span> <span class="o">=</span> <span class="n">out</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">M</span><span class="p">,</span> <span class="n">M</span><span class="p">))</span>
 
                 <span class="n">drho</span> <span class="o">+=</span> <span class="n">iHnh</span> <span class="o">@</span> <span class="n">rho</span> <span class="o">+</span> <span class="n">rho</span> <span class="o">@</span> <span class="n">iHnh</span><span class="o">.</span><span class="n">conj</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
