@@ -1,0 +1,14 @@
+﻿netket.experimental.operator.fermion.destroy
+============================================
+
+.. currentmodule:: netket.experimental.operator.fermion
+
+.. autoclass:: destroy
+   :show-inheritance:
+
+   
+      
+   
+      
+
+   

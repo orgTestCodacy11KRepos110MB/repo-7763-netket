@@ -1,0 +1,14 @@
+﻿netket.experimental.operator.fermion.number
+===========================================
+
+.. currentmodule:: netket.experimental.operator.fermion
+
+.. autoclass:: number
+   :show-inheritance:
+
+   
+      
+   
+      
+
+   
