@@ -1,0 +1,49 @@
+﻿netket.experimental.hilbert.SpinOrbitalFermions
+===============================================
+
+.. currentmodule:: netket.experimental.hilbert
+
+.. autoclass:: SpinOrbitalFermions
+   :show-inheritance:
+
+   
+
+   .. rst-class:: class-dl-groups
+
+   Inheritance
+      .. inheritance-diagram:: netket.experimental.hilbert.SpinOrbitalFermions
+         :parts: 2
+
+
+   
+
+   .. automethod:: SpinOrbitalFermions.__init__
+      
+   .. rst-class:: class-dl-groups
+
+   Attributes
+      .. autoattribute:: SpinOrbitalFermions.constrained
+      .. autoattribute:: SpinOrbitalFermions.is_constrained
+      .. autoattribute:: SpinOrbitalFermions.is_finite
+      .. autoattribute:: SpinOrbitalFermions.is_indexable
+      .. autoattribute:: SpinOrbitalFermions.local_size
+      .. autoattribute:: SpinOrbitalFermions.local_states
+      .. autoattribute:: SpinOrbitalFermions.n_states
+      .. autoattribute:: SpinOrbitalFermions.shape
+      .. autoattribute:: SpinOrbitalFermions.size
+      .. autoattribute:: SpinOrbitalFermions.spin
+   
+      
+   .. rst-class:: class-dl-groups
+
+   Methods
+      .. automethod:: SpinOrbitalFermions.all_states
+      .. automethod:: SpinOrbitalFermions.numbers_to_states
+      .. automethod:: SpinOrbitalFermions.ptrace
+      .. automethod:: SpinOrbitalFermions.random_state
+      .. automethod:: SpinOrbitalFermions.size_at_index
+      .. automethod:: SpinOrbitalFermions.states
+      .. automethod:: SpinOrbitalFermions.states_at_index
+      .. automethod:: SpinOrbitalFermions.states_to_numbers
+
+   
