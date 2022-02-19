@@ -1,6 +1,0 @@
-<map id="inheritancece76f19351" name="inheritancece76f19351">
-<area shape="rect" id="node1" href="../../hilbert/netket.hilbert.AbstractHilbert.html#netket.hilbert.AbstractHilbert" target="_top" title="Abstract class for NetKet hilbert objects." alt="" coords="5,5,148,26"/>
-<area shape="rect" id="node2" href="../../hilbert/netket.hilbert.DiscreteHilbert.html#netket.hilbert.DiscreteHilbert" target="_top" title="Abstract class for an hilbert space defined on a lattice." alt="" coords="189,5,332,26"/>
-<area shape="rect" id="node3" href="../../hilbert/netket.hilbert.HomogeneousHilbert.html#netket.hilbert.HomogeneousHilbert" target="_top" title="The Abstract base class for homogeneous hilbert spaces." alt="" coords="373,5,551,26"/>
-<area shape="rect" id="node4" href="#netket.experimental.hilbert.SpinOrbitalFermions" target="_top" title="Hilbert space for 2nd quantization fermions with spin `s` distributed among" alt="" coords="592,5,763,26"/>
-</map>

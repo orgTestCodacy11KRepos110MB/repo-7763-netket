@@ -492,8 +492,8 @@
             <span class="k">return</span> <span class="ne">NotImplementedError</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">hilbert</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">hilbert</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;Can only multiply identical hilbert spaces (got A@B, &quot;</span>
-                <span class="s2">&quot;A=</span><span class="si">{self.hilbert}</span><span class="s2">, B=</span><span class="si">{other.hilbert}</span><span class="s2">)&quot;</span>
+                <span class="s2">&quot;Can only multiply identical hilbert spaces (got A@B, &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;A=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">hilbert</span><span class="si">}</span><span class="s2">, B=</span><span class="si">{</span><span class="n">other</span><span class="o">.</span><span class="n">hilbert</span><span class="si">}</span><span class="s2">)&quot;</span>
             <span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">can_cast</span><span class="p">(</span><span class="n">_dtype</span><span class="p">(</span><span class="n">other</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">casting</span><span class="o">=</span><span class="s2">&quot;same_kind&quot;</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>

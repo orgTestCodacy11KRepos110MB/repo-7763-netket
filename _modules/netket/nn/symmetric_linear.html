@@ -111,23 +111,21 @@
 <span class="c1"># See the License for the specific language governing permissions and</span>
 <span class="c1"># limitations under the License.</span>
 
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span>
 
-<span class="kn">from</span> <span class="nn">flax.linen.module</span> <span class="kn">import</span> <span class="n">Module</span><span class="p">,</span> <span class="n">compact</span>
-<span class="kn">from</span> <span class="nn">jax</span> <span class="kn">import</span> <span class="n">lax</span>
-
-<span class="kn">import</span> <span class="nn">jax.numpy</span> <span class="k">as</span> <span class="nn">jnp</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">jax</span>
+<span class="kn">import</span> <span class="nn">jax.numpy</span> <span class="k">as</span> <span class="nn">jnp</span>
+
+<span class="kn">from</span> <span class="nn">jax</span> <span class="kn">import</span> <span class="n">lax</span>
 <span class="kn">from</span> <span class="nn">jax.nn.initializers</span> <span class="kn">import</span> <span class="n">zeros</span><span class="p">,</span> <span class="n">lecun_normal</span>
+<span class="kn">from</span> <span class="nn">flax.linen.module</span> <span class="kn">import</span> <span class="n">Module</span><span class="p">,</span> <span class="n">compact</span>
 
 <span class="kn">from</span> <span class="nn">netket.utils</span> <span class="kn">import</span> <span class="n">warn_deprecation</span>
 <span class="kn">from</span> <span class="nn">netket.utils</span> <span class="kn">import</span> <span class="n">HashableArray</span>
-<span class="kn">from</span> <span class="nn">netket.utils.types</span> <span class="kn">import</span> <span class="n">Array</span><span class="p">,</span> <span class="n">DType</span><span class="p">,</span> <span class="n">PRNGKeyT</span><span class="p">,</span> <span class="n">Shape</span><span class="p">,</span> <span class="n">NNInitFunc</span>
+<span class="kn">from</span> <span class="nn">netket.utils.types</span> <span class="kn">import</span> <span class="n">Array</span><span class="p">,</span> <span class="n">DType</span><span class="p">,</span> <span class="n">NNInitFunc</span>
 <span class="kn">from</span> <span class="nn">netket.utils.group</span> <span class="kn">import</span> <span class="n">PermutationGroup</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Sequence</span>
 <span class="kn">from</span> <span class="nn">netket.graph</span> <span class="kn">import</span> <span class="n">Graph</span><span class="p">,</span> <span class="n">Lattice</span>
-<span class="kn">import</span> <span class="nn">warnings</span>
 
 <span class="c1"># All layers defined here have kernels of shape [out_features, in_features, n_symm]</span>
 <span class="n">default_equivariant_initializer</span> <span class="o">=</span> <span class="n">lecun_normal</span><span class="p">(</span><span class="n">in_axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">out_axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
