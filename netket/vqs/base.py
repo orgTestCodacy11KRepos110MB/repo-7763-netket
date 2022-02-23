@@ -214,6 +214,15 @@ class VariationalState(abc.ABC):
 
         return expect_and_grad(self, Ô, use_covariance, mutable=mutable)
 
+    def fidelity(self, ψ):
+        return fidelity(self, ψ) 
+
+    def fidelity_and_grad(self, ψ, *, mutable:Optional[Any] = None):
+        if mutable is None:
+            mutable = self.mutable
+
+        return fidelity_and_grad(self, ψ, mutable) 
+
     # @abc.abstractmethod
     def quantum_geometric_tensor(self, qgt_type):
         r"""Computes an estimate of the quantum geometric tensor G_ij.
@@ -381,3 +390,15 @@ def expect_and_grad(
     return expect_and_grad(
         vstate, operator, use_covariance, *args, mutable=mutable, **kwargs
     )
+
+@dispatch.abstract
+def fidelity(ψ: VariationalState, ϕ: VariationalState) -> Stats:  # noqa: F811
+    """
+    Computes the fidelity between this state and another state.
+    """
+
+@dispatch.abstract
+def fidelity_and_grad(ψ: VariationalState, ϕ: VariationalState, mutable = None) -> Stats:  # noqa: F811
+    """
+    Computes the fidelity between this state and another state.
+    """

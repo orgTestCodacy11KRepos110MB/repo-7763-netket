@@ -19,3 +19,6 @@ from . import expect
 from . import expect_grad
 
 from . import expect_chunked
+
+from . import fidelity
+from . import fidelity_grad
