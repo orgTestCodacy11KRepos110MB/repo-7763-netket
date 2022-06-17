@@ -552,14 +552,15 @@ def odefun_host_callback(state, driver, *args, **kwargs):
     Calls odefun through a host callback in order to make the rest of the
     ODE solver jit-able.
     """
-    result_shape = jax.tree_map(
-        lambda x: jax.ShapeDtypeStruct(x.shape, x.dtype),
-        state.parameters,
-    )
+    # result_shape = jax.tree_map(
+    #     lambda x: jax.ShapeDtypeStruct(x.shape, x.dtype),
+    #     state.parameters,
+    # )
 
-    return hcb.call(
-        lambda args_and_kw: odefun(state, driver, *args_and_kw[0], **args_and_kw[1]),
-        # pack args and kwargs together, since host_callback passes a single argument:
-        (args, kwargs),
-        result_shape=result_shape,
-    )
+    # return hcb.call(
+    #     lambda args_and_kw: odefun(state, driver, *args_and_kw[0], **args_and_kw[1]),
+    #     # pack args and kwargs together, since host_callback passes a single argument:
+    #     (args, kwargs),
+    #     result_shape=result_shape,
+    # )
+    return odefun(state, driver, *args, **kwargs)
