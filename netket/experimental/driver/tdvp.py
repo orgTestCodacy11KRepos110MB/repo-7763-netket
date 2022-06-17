@@ -38,6 +38,12 @@ from netket.vqs import VariationalState, VariationalMixedState, MCState
 from netket.experimental.dynamics import RKIntegratorConfig
 from netket.experimental.dynamics._rk_solver import euclidean_norm, maximum_norm
 
+def block_until_ready(x):
+    if hasattr(x, "block_until_ready"):
+        return x.block_until_ready()
+    else:
+        return x
+
 
 class TDVP(AbstractVariationalDriver):
     """
@@ -390,6 +396,8 @@ class TDVP(AbstractVariationalDriver):
                 for callback in callbacks:
                     if not callback(step, log_data, self):
                         callback_stop = True
+
+                log_data = tree_map(block_until_ready, log_data)
 
                 for logger in loggers:
                     logger(self.step_value, log_data, self.state)

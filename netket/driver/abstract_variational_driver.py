@@ -38,6 +38,12 @@ def _to_iterable(maybe_iterable):
 
     return surely_iterable
 
+def block_until_ready(x):
+    if hasattr(x, "block_until_ready"):
+        return x.block_until_ready()
+    else:
+        return x
+
 
 # Note: to implement a new Driver (see also _vmc.py for an example)
 # If you want to inherit the nice interface of AbstractMCDriver, you should
@@ -263,6 +269,8 @@ class AbstractVariationalDriver(abc.ABC):
                 for callback in callbacks:
                     if not callback(step, log_data, self):
                         callback_stop = True
+
+                log_data = tree_map(block_until_ready, log_data)
 
                 for logger in loggers:
                     logger(self.step_count, log_data, self.state)
