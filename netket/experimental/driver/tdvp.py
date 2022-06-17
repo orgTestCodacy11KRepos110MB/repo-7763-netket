@@ -378,8 +378,10 @@ class TDVP(AbstractVariationalDriver):
                 pbar.refresh()
 
             for step in self._iter(T, tstops=tstops, callback=update_progress_bar):
+                print(f"#{mpi.rank}: estimating")
                 log_data = self.estimate(obs)
                 self._log_additional_data(log_data, step)
+                print(f"#{mpi.rank}: progressbar")
 
                 self._postfix = {"n": self.step_count}
                 # if the cost-function is defined then report it in the progress bar
@@ -396,8 +398,10 @@ class TDVP(AbstractVariationalDriver):
                 for callback in callbacks:
                     if not callback(step, log_data, self):
                         callback_stop = True
+                print(f"#{mpi.rank}: blocking")
 
-                log_data = tree_map(block_until_ready, log_data)
+                log_data = jax.tree_map(block_until_ready, log_data)
+                print(f"#{mpi.rank}: logging")
 
                 for logger in loggers:
                     logger(self.step_value, log_data, self.state)
@@ -511,6 +515,7 @@ def odefun(state, driver, t, w, **kwargs):
 @dispatch
 def odefun(state: MCState, driver: TDVP, t, w, *, stage=0):  # noqa: F811
     # pylint: disable=protected-access
+    print(f"#{mpi.rank}: ==> odefun 1")
 
     state.parameters = w
     state.reset()
@@ -526,6 +531,7 @@ def odefun(state: MCState, driver: TDVP, t, w, *, stage=0):  # noqa: F811
     qgt = driver.qgt(driver.state)
     if stage == 0:  # TODO: This does not work with FSAL.
         driver._last_qgt = qgt
+    print(f"#{mpi.rank}: ==> odefun 2 startsolve")
 
     initial_dw = None if driver.linear_solver_restart else driver._dw
     driver._dw, _ = qgt.solve(driver.linear_solver, driver._loss_grad, x0=initial_dw)
@@ -536,6 +542,7 @@ def odefun(state: MCState, driver: TDVP, t, w, *, stage=0):  # noqa: F811
         driver._dw,
         state.parameters,
     )
+    print(f"#{mpi.rank}: ==> odefun 3 end")
 
     return driver._dw
 
