@@ -397,7 +397,7 @@ class TDVP(AbstractVariationalDriver):
                     if not callback(step, log_data, self):
                         callback_stop = True
 
-                log_data = tree_map(block_until_ready, log_data)
+                log_data = jax.tree_map(block_until_ready, log_data)
 
                 for logger in loggers:
                     logger(self.step_value, log_data, self.state)
