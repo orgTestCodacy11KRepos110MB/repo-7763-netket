@@ -13,6 +13,7 @@
 # limitations under the License.
 
 from typing import Callable, Optional, Tuple
+from functools import partial
 
 import jax
 import jax.numpy as jnp
@@ -22,7 +23,7 @@ from netket.utils.types import Array, PyTree
 
 default_dtype = jnp.float64
 
-
+@partial(jax.jit, static_argnames='sz')
 def expand_dim(tree: PyTree, sz: int):
     """
     creates a new pytree with same structure as input `tree`, but where very leaf
