@@ -23,7 +23,8 @@ from netket.utils.types import Array, PyTree
 
 default_dtype = jnp.float64
 
-@partial(jax.jit, static_argnames='sz')
+
+@partial(jax.jit, static_argnames="sz")
 def expand_dim(tree: PyTree, sz: int):
     """
     creates a new pytree with same structure as input `tree`, but where very leaf

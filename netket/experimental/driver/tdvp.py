@@ -38,6 +38,7 @@ from netket.vqs import VariationalState, VariationalMixedState, MCState
 from netket.experimental.dynamics import RKIntegratorConfig
 from netket.experimental.dynamics._rk_solver import euclidean_norm, maximum_norm
 
+
 def block_until_ready(x):
     if hasattr(x, "block_until_ready"):
         return x.block_until_ready()

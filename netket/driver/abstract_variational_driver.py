@@ -38,6 +38,7 @@ def _to_iterable(maybe_iterable):
 
     return surely_iterable
 
+
 def block_until_ready(x):
     if hasattr(x, "block_until_ready"):
         return x.block_until_ready()
