@@ -48,6 +48,8 @@ try:
 except ImportError:
     _FIELDS = "__dataclass_fields__"
 
+from typing_extensions import dataclass_transform  # pytype: disable=not-supported-yet
+
 _CACHES = "__dataclass_caches__"
 
 PRECOMPUTE_CACHED_PROPERTY_NAME = "_precompute_cached_properties"
@@ -355,6 +357,7 @@ def replace_hash_method(data_clz, *, globals={}):
     setattr(data_clz, "__hash__", fun)
 
 
+@dataclass_transform(field_descriptors=(field,))
 def dataclass(clz=None, *, init_doc=MISSING, cache_hash=False, _frozen=True):
     """
     Decorator creating a NetKet-flavour dataclass.
@@ -411,12 +414,12 @@ def dataclass(clz=None, *, init_doc=MISSING, cache_hash=False, _frozen=True):
     # flax stuff: identify states
     meta_fields = []
     data_fields = []
-    for name, field_info in getattr(data_clz, _FIELDS, {}).items():
+    for field_info in dataclasses.fields(data_clz):
         is_pytree_node = field_info.metadata.get("pytree_node", True)
         if is_pytree_node:
-            data_fields.append(name)
+            data_fields.append(field_info.name)
         else:
-            meta_fields.append(name)
+            meta_fields.append(field_info.name)
 
     # List the cache fields
     cache_fields = []
@@ -455,9 +458,9 @@ def dataclass(clz=None, *, init_doc=MISSING, cache_hash=False, _frozen=True):
 
     # flax serialization
     skip_serialize_fields = []
-    for name, field_info in data_clz.__dataclass_fields__.items():
+    for field_info in dataclasses.fields(data_clz):
         if not field_info.metadata.get("serialize", True):
-            skip_serialize_fields.append(name)
+            skip_serialize_fields.append(field_info.name)
 
     def to_state_dict(x):
         state_dict = {
