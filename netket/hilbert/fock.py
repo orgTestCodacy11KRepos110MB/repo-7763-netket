@@ -18,6 +18,7 @@ import numpy as np
 from numba import jit
 
 from netket.graph import AbstractGraph
+from netket.utils import StaticRange
 
 from .homogeneous import HomogeneousHilbert
 from ._deprecations import graph_to_N_depwarn
@@ -98,7 +99,7 @@ class Fock(HomogeneousHilbert):
 
         if self._n_max is not None:
             # assert self._n_max > 0
-            local_states = np.arange(self._n_max + 1)
+            local_states = StaticRange(0.0, 1.0, self._n_max + 1)
         else:
             self._n_max = FOCK_MAX
             local_states = None

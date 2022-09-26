@@ -19,6 +19,8 @@ import numpy as np
 from netket.graph import AbstractGraph
 from numba import jit
 
+from netket.utils import StaticRange
+
 from .homogeneous import HomogeneousHilbert
 from ._deprecations import graph_to_N_depwarn
 
@@ -86,13 +88,10 @@ class Spin(HomogeneousHilbert):
         N = graph_to_N_depwarn(N=N, graph=graph)
 
         local_size = round(2 * s + 1)
-        local_states = np.empty(local_size)
 
         assert int(2 * s + 1) == local_size
 
-        for i in range(local_size):
-            local_states[i] = -round(2 * s) + 2 * i
-        local_states = local_states.tolist()
+        local_states = StaticRange(-2 * s, 2, local_size)
 
         _check_total_sz(total_sz, s, N)
         if total_sz is not None:

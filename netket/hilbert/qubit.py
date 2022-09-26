@@ -17,6 +17,7 @@ from typing import Optional, Union, List
 import numpy as np
 
 from netket.graph import AbstractGraph
+from netket.utils import StaticRange
 
 from .homogeneous import HomogeneousHilbert
 from ._deprecations import graph_to_N_depwarn
@@ -42,7 +43,7 @@ class Qubit(HomogeneousHilbert):
         """
         N = graph_to_N_depwarn(N=N, graph=graph)
 
-        super().__init__([0.0, 1.0], N)
+        super().__init__(StaticRange(0.0, 1.0, 2), N)
 
     def states_to_local_indices(self, x):
         return x.astype(np.int32)

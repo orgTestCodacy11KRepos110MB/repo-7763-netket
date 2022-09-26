@@ -19,6 +19,8 @@ from numbers import Real
 import numpy as np
 from numba import jit
 
+from netket.utils import StaticRange
+
 from .discrete_hilbert import DiscreteHilbert
 from .hilbert_index import HilbertIndex
 
@@ -68,16 +70,21 @@ class HomogeneousHilbert(DiscreteHilbert):
 
         self._is_finite = local_states is not None
 
-        if self._is_finite:
-            self._local_states = np.asarray(local_states)
-            assert self._local_states.ndim == 1
-            self._local_size = self._local_states.shape[0]
-            self._local_states = self._local_states.tolist()
-            self._local_states_frozen = frozenset(self._local_states)
+        if isinstance(local_states, StaticRange):
+            self._local_states = local_states
+            self._local_size = len(local_states)
+            self._local_states_frozen = local_states
         else:
-            self._local_states = None
-            self._local_states_frozen = None
-            self._local_size = np.iinfo(np.intp).max
+            if self._is_finite:
+                self._local_states = np.asarray(local_states)
+                assert self._local_states.ndim == 1
+                self._local_size = self._local_states.shape[0]
+                self._local_states = self._local_states.tolist()
+                self._local_states_frozen = frozenset(self._local_states)
+            else:
+                self._local_states = None
+                self._local_states_frozen = None
+                self._local_size = np.iinfo(np.intp).max
 
         self._has_constraint = constraint_fn is not None
         self._constraint_fn = constraint_fn
