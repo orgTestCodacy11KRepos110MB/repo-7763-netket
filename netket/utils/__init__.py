@@ -44,6 +44,8 @@ from .history import History, accum_in_tree, accum_histories_in_tree
 
 from . import mpi
 
+from .static_range import Range as StaticRange
+
 # error if old dependencies are detected
 from . import _dependencies_check
 
