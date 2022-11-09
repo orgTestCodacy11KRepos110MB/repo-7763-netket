@@ -13,6 +13,8 @@
 # limitations under the License.
 
 import flax.linen as nn
+
+import jax
 import jax.numpy as jnp
 
 from netket.hilbert import DiscreteHilbert
@@ -52,4 +54,7 @@ class LogStateVector(nn.Module):
         )
 
     def __call__(self, x_in: Array):
-        return self.logstate[states_to_numbers(self.hilbert, x_in)]
+        
+        indices = jax.lax.stop_gradient(states_to_numbers(self.hilbert, jax.lax.stop_gradient(x_in)))
+
+        return self.logstate[indices]
